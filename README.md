@@ -1,5 +1,5 @@
-# Linux
+# Constantly being updated~
 
-This git contains Linux code/commands I've noted down whilst currently learning and studying to be a pen tester.
+This contains Linux code & commands I've taken down whilst currently learning and studying to be a pen tester.
 
-Use as you wish.
+
