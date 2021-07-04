@@ -1,4 +1,4 @@
-# Welcome!
+# **Welcome!**
 
 This page will link to notes on my github orientated towards Kali Linux & Pen Testing. 
 I have taken these notes while learning about Penetration Testing, Cyber Security, Kali Linux and now currently studying for Security+ and OSCP.
