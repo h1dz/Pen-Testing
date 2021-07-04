@@ -6,10 +6,10 @@ These notes are subject to change as I am constantly learning.
 ...
 
 ### **Pen Testing Methodology:**
-### [Enumeration](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enumeration) -----> [Privilege Escalation](https://github.com/h1dz/Pen-Testing/blob/Methodology/Privilege-Escalation) -----> [Persistence](https://github.com/h1dz/Pen-Testing/blob/Methodology/Persistence)                      
+### [Enumeration](https://github.com/h1dz/Pen-Testing/tree/Enumeration) -----> [Privilege Escalation](https://github.com/h1dz/Pen-Testing/tree/Privilege-Escalation) -----> [Persistence](https://github.com/h1dz/Pen-Testing/blob/Methodology/Persistence)                      
 ...
 ### [Pen Testing Tools](https://github.com/h1dz/Pen-Testing/tree/Tools)
-Such Tools include; nmap, hydra, burpsuit, gobuster, metasploit, OWASP ZAP, sqlmap, John The Ripper.   
+Tools include; nmap, hydra, burpsuit, gobuster, metasploit, OWASP ZAP, sqlmap, John The Ripper.   
 ...
 ### [Linux Commands](https://github.com/h1dz/Pen-Testing/tree/Commands)
 Linux commands that I've found very useful.  
