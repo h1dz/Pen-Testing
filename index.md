@@ -1,6 +1,6 @@
 # Welcome!
 
-This page will link to my notes on github orientated towards Kali Linux. 
+This page will link to notes on my github orientated towards Kali Linux & Pen Testing. 
 I have taken these notes while learning about Penetration Testing, Cyber Security, Kali Linux and now currently studying for Security+ and OSCP.
 These notes are subject to change as I am constantly learning.  
 ...
@@ -12,7 +12,7 @@ These notes are subject to change as I am constantly learning.
 Such Tools include; nmap, hydra, burpsuit, gobuster, metasploit, OWASP ZAP, sqlmap, John The Ripper.   
 ...
 ### [Random Linux Commands](https://github.com/h1dz/Pen-Testing/blob/Commands/Basic%20Linux%20Commands)
-Linux commands that Iv'e found very useful.  
+Linux commands that I've found very useful.  
 ...
 
 ```markdown
