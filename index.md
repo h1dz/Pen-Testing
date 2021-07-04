@@ -5,13 +5,13 @@ I have taken these notes while learning about Penetration Testing, Cyber Securit
 These notes are subject to change as I am constantly learning.  
 ...
 
-### Pen Testing Methodology:
+### **Pen Testing Methodology:**
 ### [Enumeration](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enumeration) -----> [Privilege Escalation](https://github.com/h1dz/Pen-Testing/blob/Methodology/Privilege-Escalation) -----> [Persistence](https://github.com/h1dz/Pen-Testing/blob/Methodology/Persistence)                      
 ...
 ### [Pen Testing Tools](https://github.com/h1dz/Pen-Testing/tree/Tools)
 Such Tools include; nmap, hydra, burpsuit, gobuster, metasploit, OWASP ZAP, sqlmap, John The Ripper.   
 ...
-### [Random Linux Commands](https://github.com/h1dz/Pen-Testing/blob/Commands/Basic%20Linux%20Commands)
+### [Linux Commands](https://github.com/h1dz/Pen-Testing/tree/Commands)
 Linux commands that I've found very useful.  
 ...
 
