@@ -3,4 +3,4 @@
 
 This git contains code, tools, methods & other miscellaneous commands I've taken down that I've found helpful.
 
-_Italic_ ~Constantly being updated
+_~Constantly being updated_
