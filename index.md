@@ -4,7 +4,7 @@ This page will link to my notes on github orientated towards Kali Linux.
 I have taken these notes while learning about Penetration Testing, Cyber Security, Kali Linux and now currently studying for Security+ and OSCP.
 
 ### Pen Testing Methodology:
-### [Enumeration](https://github.com/h1dz/kali/blob/Methodology/Enumeration)             ### [Privilege Escalation](https://github.com/h1dz/kali/blob/Methodology/Privilege-Escalation)             ### Reverse Shells
+### [Enumeration](https://github.com/h1dz/kali/blob/Methodology/Enumeration)             ###[Privilege Escalation](https://github.com/h1dz/kali/blob/Methodology/Privilege-Escalation)             ###Reverse Shells
 
 
 
