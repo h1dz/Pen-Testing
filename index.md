@@ -3,7 +3,15 @@
 This page will link to my notes on github orientated towards Kali Linux. 
 I have taken these notes while learning about Penetration Testing, Cyber Security, Kali Linux and now currently studying for Security+ and OSCP.
 
-### [Pen Testing Methodology](https://github.com/h1dz/kali/tree/Methodology)
+### Pen Testing Methodology
+  ### [Enumeration](https://github.com/h1dz/kali/blob/Methodology/Enumeration)
+  ### [Priviledge Escalation](https://github.com/h1dz/kali/blob/Methodology/Privilege-Escalation)
+  ### Reverse Shells
+
+### [Pen Testing Tools](https://github.com/h1dz/kali/tree/Tools)
+
+### [Linux Commands](https://github.com/h1dz/kali/blob/Commands/Basic%20Linux%20Commands)
+
 
 
 ```markdown
@@ -24,4 +32,3 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
