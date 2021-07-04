@@ -10,7 +10,7 @@ These notes are subject to change as I am constantly learning.
 /
 /
 ### [Pen Testing Tools](https://github.com/h1dz/Pen-Testing/tree/Tools)
-Such Tools include; nmap, hydra, burpsuit, gobuster, metasploit, OWASP ZAP, sqlmap, John The Ripper.
+Such Tools include; nmap, hydra, burpsuit, gobuster, metasploit, OWASP ZAP, sqlmap, John The Ripper.   
 /
 /
 /
