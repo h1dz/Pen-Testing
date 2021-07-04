@@ -6,7 +6,7 @@ These notes are subject to change as I am constantly learning.
 ...
 
 ### **Pen Testing Methodology:**
-### [Enumeration](https://github.com/h1dz/Pen-Testing/tree/Enumeration) -----> [Privilege Escalation](https://github.com/h1dz/Pen-Testing/tree/Privilege-Escalation) -----> [Persistence](https://github.com/h1dz/Pen-Testing/blob/Methodology/Persistence)                      
+### [Enumeration](https://github.com/h1dz/Pen-Testing/tree/Enumeration) -----> [Privilege Escalation](https://github.com/h1dz/Pen-Testing/tree/Privilege-Escalation) -----> [Persistence](https://github.com/h1dz/Pen-Testing/tree/Persistance)                      
 ...
 ### [Pen Testing Tools](https://github.com/h1dz/Pen-Testing/tree/Tools)
 Tools include; nmap, hydra, burpsuit, gobuster, metasploit, OWASP ZAP, sqlmap, John The Ripper.   
@@ -14,22 +14,12 @@ Tools include; nmap, hydra, burpsuit, gobuster, metasploit, OWASP ZAP, sqlmap, J
 ### [Linux Commands](https://github.com/h1dz/Pen-Testing/tree/Commands)
 Linux commands that I've found very useful.  
 ...
-
-```markdown
-Syntax highlighted code block
-
+```
 # Header 1
 ## Header 2
 ### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
 
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
 ```
-
