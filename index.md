@@ -12,8 +12,7 @@ Such Tools include; nmap, hydra, burpsuit, gobuster, metasploit, OWASP ZAP, sqlm
 ...
 ### [Random Linux Commands](https://github.com/h1dz/Pen-Testing/blob/Commands/Basic%20Linux%20Commands)
 Linux commands that Iv'e found very useful.
-
-
+...
 ```markdown
 Syntax highlighted code block
 
