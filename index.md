@@ -6,7 +6,7 @@ I have taken these notes while learning about Penetration Testing, Cyber Securit
 ### Pen Testing Methodology:
 ### [Enumeration](https://github.com/h1dz/kali/blob/Methodology/Enumeration)          
 ### [Privilege Escalation](https://github.com/h1dz/kali/blob/Methodology/Privilege-Escalation)            
-### Reverse Shells
+### Persistence / Reverse Shells
 
 
 
