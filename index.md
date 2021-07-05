@@ -25,13 +25,8 @@ Linux commands that I've found very useful.
 _~Constantly being updated_
 
 
-# TBC -
+### TBC -
 ```
-# Header 1
-## Header 2
-### Header 3
-
 **Bold** and _Italic_ and `Code` text
-
 [Link](url) and ![Image](src)
 ```
