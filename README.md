@@ -26,3 +26,4 @@ Linux commands that I've found very useful.
 ...  
 
 _~Constantly being updated_
+<script src="https://tryhackme.com/badge/414294"></script>
