@@ -6,7 +6,9 @@ This git contains code, tools, methods & other miscellaneous commands I've taken
 
 I have taken these notes while learning about Penetration Testing, Cyber Security, Kali Linux and now currently studying for Security+ and OSCP.
 These notes are subject to change as I am constantly learning.  
-...
+...  
+!!! The following notes & code is currently very messy !!!  
+...  
 
 ### **Pen Testing Methodology:**
 ### [Enumeration](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enumeration.md) -----> [Privilege Escalation](https://github.com/h1dz/Pen-Testing/blob/Methodology/Privilege-Escalation.md) -----> [Persistence](https://github.com/h1dz/Pen-Testing/blob/Methodology/Backdoors.md)                    
