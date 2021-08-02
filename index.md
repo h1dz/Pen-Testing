@@ -25,10 +25,3 @@ Linux commands that I've found very useful.
 ...  
 
 _~Constantly being updated_
-
-
-### TBC -
-```
-**Bold** and _Italic_ and `Code` text
-[Link](url) and ![Image](src)
-```
