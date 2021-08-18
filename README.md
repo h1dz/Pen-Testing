@@ -27,5 +27,5 @@ Linux commands that I've found very useful.
    
 ...  
 
-_~Constantly being updated_
+_ last update:__/__/__ _
 
