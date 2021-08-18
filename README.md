@@ -27,5 +27,5 @@ Linux commands that I've found very useful.
    
 ...  
 
-_last update:__/__/___
+_last update: _
 
