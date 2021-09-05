@@ -8,7 +8,7 @@ This page will link to notes orientated towards penetration tools and commands o
 This git contains scripts, tools & other miscellaneous commands I've taken down that I've found helpful while self learning about pen testing. 
 
 !!! These notes are subject to change as I am constantly learning and updating them !!!     
-...  
+     
 !!! This git is not yet organized, I just wanted to get this information out there !!!    
     
 
