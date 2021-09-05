@@ -2,7 +2,7 @@
 #Simple scan for enumerating a web server
 #Rename to sscan.sh 
 #chmod +x sscan.sh
-#Usage:          ./sscan <ip>
+#Usage:          ./sscan.sh <ip>
 
 export IP=$1
 echo 'IP = '$1 >> scanresults
