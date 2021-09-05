@@ -1,5 +1,5 @@
 #!/bin/bash
-#Simple scan for enum web server orientated
+#Simple scan for enumerating a web server
 #Rename to sscan.sh 
 #chmod +x sscan.sh
 #Usage:          ./sscan <ip>
