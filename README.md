@@ -4,13 +4,12 @@
 ## **Welcome!**
  
 
-This page will link to notes on my github orientated towards Kali Linux & Pen Testing.   
-This git contains code, tools, methods & other miscellaneous commands I've taken down that I've found helpful. 
+This page will link to notes orientated towards penetration tools and commands on using them.
+This git contains code, tools, methods & other miscellaneous commands I've taken down that I've found helpful while learning about this role. 
 
-I have taken these notes while learning about Penetration Testing, Cyber Security, Kali Linux and now currently studying for Security+ and OSCP.
-These notes are subject to change as I am constantly learning.  
+!!! These notes are subject to change as I am constantly learning and updating them !!!     
 ...  
-!!! The following notes & code is currently very messy and not yet organized !!!  
+!!! This git is not yet organized, I just wanted to get this information out there !!!    
 ...  
 
 ### **Pen Testing Methodology:**
@@ -22,10 +21,9 @@ Tools include; nmap, hydra, burpsuit, gobuster, metasploit, OWASP ZAP, sqlmap, J
 ### [Linux Commands](https://github.com/h1dz/Pen-Testing/tree/Commands)
 Linux commands that I've found very useful.  
 ...  
-  
+### [Bash Scripts](https://github.com/h1dz/Pen-Testing/tree/BashScripts)
 ...
    
 ...  
 
-_last update: _
-
+_last update: 05/09/2021_
