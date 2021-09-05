@@ -3,7 +3,7 @@
 
 #Rename to s
 #chmod +x s
-#Usage:./s <service> <version>
+#Usage:   ./s <service> <version>
  
-printf "\nSearchsploit...\n\n"
+printf "\nSearching...\n\n"
 searchsploit $1 $2
