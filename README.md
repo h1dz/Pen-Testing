@@ -26,6 +26,5 @@ Linux commands that I've found very useful.
 ### [Bash Scripts](https://github.com/h1dz/Pen-Testing/tree/BashScripts)
 - Searchsploit lazy script    
 - SMB enumeration script
-- Simple nmap and web server enumerating script
       
 _last update: 05/09/2021_
