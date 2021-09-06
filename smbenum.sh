@@ -3,7 +3,7 @@
 #chmod +x smb3num.sh
 #Usage:         ./smb3num <ip>
 
-export IP=$1
+
 echo 'IP = '$1 >> resultsSMB
 printf "\nRunning...\n\n"
 printf "\n----------------------------------Start------------------------------------------\n\n" >> resultsSMB
