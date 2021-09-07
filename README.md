@@ -11,6 +11,6 @@ This bash script will enumerate SMB shares on port 445
 -checks login through wwwroot
    
 ## searchsploitLAZY.sh
-Simple script that is for the lazy people like me out there, instead of having to type seaerchsploit <service> <version>, it just shorthands searchsploit to the letter s.
+Simple script that is for the lazy people like me out there, instead of having to type searchsploit <service> <version>, it just shorthands searchsploit to the letter s.
 Rename to s
 Usage: ./s <service> <version>
