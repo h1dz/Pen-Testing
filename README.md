@@ -13,7 +13,7 @@ This git contains scripts, tools & other miscellaneous commands I've taken down 
     
    
 ### **Methodology:**
-### [Enumerating and IP](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enumeration.md) -----> [Enumeration 4 Priv Esc](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enum4PrivEsc.md) -----> [Backdoors](https://github.com/h1dz/Pen-Testing/blob/Methodology/Backdoors.md)                      
+### [Enumerating an IP](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enumeration.md) -----> [Enumeration 4 Priv Esc](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enum4PrivEsc.md) -----> [Backdoors](https://github.com/h1dz/Pen-Testing/blob/Methodology/Backdoors.md)                      
    
    
    
