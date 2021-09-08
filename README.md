@@ -27,4 +27,4 @@ Linux commands that I've found very useful.
 - Searchsploit lazy script    
 - SMB enumeration script
       
-_last update: 05/09/2021_
+_last update: 08/09/2021_
