@@ -3,8 +3,6 @@
 #chmod +x priv3num
 
 #This script will enumerate information used for privilege escalation
-#Enable python web server first
-#The script will destroy itself 30 seconds after being run, be sure to send the file back the attacker quickly
 
 #Usage:        			  ./priv3num <RHOST> <LHOST> <LPORT>
 
