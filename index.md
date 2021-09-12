@@ -28,4 +28,4 @@ Linux commands that I've found very useful.
 - SMB enumeration script
 - Priv Esc enum script
    
-_last update: 08/09/2021_
+_last update: 12/09/2021_
