@@ -16,3 +16,4 @@ Simple script that is for the lazy people like me out there, instead of having t
 -Usage: ./s <service> <version>   
 
 ## priv3num.sh
+Use this to enumerate information on a linux machine to help discover vulnerabilities that lead to root access.
