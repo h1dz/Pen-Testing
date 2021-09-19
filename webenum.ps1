@@ -1,3 +1,4 @@
+#Work in progress!!!
 #Download webenum.ps1
 #powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://github.com/h1dz/Pen-Testing/blob/BashScripts/webenum.ps1')"
 Unblock-File -Path .\webenum.ps1
@@ -24,8 +25,6 @@ Get-LocalUser | Where-Object -Property PasswordRequired -Match false | Out-File 
 Get-Content "C:\Windows\Panther\Unattend\Unattended.xml" | Out-File -FilePath .\1.txt -Append 
 # C:\ Owner
 Get-Acl C:\ | Out-File -FilePath .\1.txt -Append  
-# SPN
-
 # Cmdlets
 Get-Command -CommandType Cmdlet | measure | Out-File -FilePath .\1.txt -Append  
 # Execution policy
