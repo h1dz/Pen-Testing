@@ -11,7 +11,6 @@ New-Item -ItemType "file" -Path "C:\Windows\System32\spool\drivers\color\2.txt"
 hostname | Out-File -FilePath .\1.txt -Append  
 whoami | Out-File -FilePath .\1.txt -Append  
 systeminfo | Out-File -FilePath .\1.txt -Append 
-net user <user> | Out-File -FilePath .\1.txt -Append 
 Get-LocalUser | Out-File -FilePath .\1.txt -Append  
 net users | Out-File -FilePath .\1.txt -Append  
 whoami /priv | Out-File -FilePath .\1.txt -Append 
