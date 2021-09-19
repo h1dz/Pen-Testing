@@ -17,3 +17,6 @@ Simple script that is for the lazy people like me out there, instead of having t
 
 ## priv3num.sh
 Use this to enumerate information on a linux machine to help discover vulnerabilities that lead to root access.
+
+## webenum.ps1
+This is currently under work.
