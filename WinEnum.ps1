@@ -54,7 +54,7 @@ Write-Output "################################## Execution Policy ##############
 Get-ExecutionPolicy -list | Out-File -FilePath .\1.txt -Append  
 Write-Output "################################## Scheduled Tasks ##################################" | Out-File -FilePath .\1.txt -Append
 schtasks /query /fo LIST /v | Out-File -FilePath .\1.txt -Append
-Get-ScheduledTask | where {$_.TaskPath -notlike "\Microsoft*"} | ft TaskName,TaskPath,State | Out-File -FilePath .\1.txt -Append 
+Get-ScheduledTask | Where-Object {$_.TaskPath -notlike "\Microsoft*"} | Format-Table TaskName,TaskPath,State | Out-File -FilePath .\1.txt -Append 
 Write-Output "################################## Backup Files ##################################" | Out-File -FilePath .\1.txt -Append
 Get-ChildItem -Path C: -Include .bak -File -Recurse -ErrorAction SilentlyContinue | Out-File -FilePath .\1.txt -Append 
 Write-Output "################################## Patches ##################################" | Out-File -FilePath .\1.txt -Append
