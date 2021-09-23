@@ -3,7 +3,7 @@
 The following scripts are not final versions yet, but still work fine.
   
 ## smb3num.sh
-This bash script will enumerate SMB shares on port 445 & save results to a .txt file.   
+This bash script will enumerate SMB shares on port 445 and save results to a .txt file.   
 -lists shares   
 -share info   
 -crackmap   
