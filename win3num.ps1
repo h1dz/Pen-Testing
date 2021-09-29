@@ -1,6 +1,6 @@
 <#
 Download script:
-(New-Object System.Net.WebClient).DownloadFile("https://raw.githubusercontent.com/h1dz/Pen-Testing/BashScripts/WinEnum.ps1", "C:\Windows\System32\spool\drivers\color\winenum.ps1")
+(New-Object System.Net.WebClient).DownloadFile("https://raw.githubusercontent.com/h1dz/Pen-Testing/BashScripts/win3num.ps1", "C:\Windows\System32\spool\drivers\color\winenum.ps1")
 #>
 ################################## Setup ##################################
 Set-ExecutionPolicy Bypass -Scope CurrentUser -Force
