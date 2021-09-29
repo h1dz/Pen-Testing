@@ -13,9 +13,8 @@ This git contains scripts, tools & other miscellaneous commands I've taken down 
     
    
 ### **Methodology:**
-### [Enumerating an IP](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enumeration.md) -----> [Enumeration 4 Priv Esc](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enum4PrivEsc.md) -----> [Priv Esc] -----> [Backdoors](https://github.com/h1dz/Pen-Testing/blob/Methodology/Backdoors.md)                      
-   
-   
+### [Enumerating an IP](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enumeration.md) -----> [Enumerating Linux](https://github.com/h1dz/Pen-Testing/blob/Methodology/LinuxEnum.md) -----> [Enumerating Windows](https://github.com/h1dz/Pen-Testing/blob/Methodology/WinEnum.md) [Priv Esc] -----> [Backdoors](https://github.com/h1dz/Pen-Testing/blob/Methodology/Backdoors.md)                          
+      
    
 ### [Pen Testing Tools](https://github.com/h1dz/Pen-Testing/tree/Tools)
 Tools include; nmap, hydra, burpsuit, gobuster, metasploit, OWASP ZAP, sqlmap, John The Ripper.   
@@ -26,6 +25,9 @@ Linux commands that I've found very useful.
 ### [Bash Scripts](https://github.com/h1dz/Pen-Testing/tree/BashScripts)
 - Searchsploit lazy script    
 - SMB enumeration script
-- Priv Esc enum script
+- Linux enumeration script
+- Windows enumeration script
+- Web enumeration script 
+- Scrape used to make a dictionary file for bruteforcing from sraping webpages using Cewl
       
-_last update: 12/09/2021_
+_last update: 29/09/2021_
