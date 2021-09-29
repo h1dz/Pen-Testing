@@ -22,12 +22,12 @@ Tools include; nmap, hydra, burpsuit, gobuster, metasploit, OWASP ZAP, sqlmap, J
 ### [Linux Commands](https://github.com/h1dz/Pen-Testing/tree/Commands)
 Linux commands that I've found very useful.  
     
-### [Bash Scripts](https://github.com/h1dz/Pen-Testing/tree/BashScripts)
-- Searchsploit lazy script    
+### [Bash Scripts](https://github.com/h1dz/Pen-Testing/tree/BashScripts) 
 - SMB enumeration script
 - Linux enumeration script
 - Windows enumeration script
 - Web enumeration script 
+- Searchsploit lazy script  
 - Scrape used to make a dictionary file for bruteforcing from sraping webpages using Cewl
       
 _last update: 29/09/2021_
