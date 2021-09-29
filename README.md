@@ -7,9 +7,9 @@
 This page will link to notes orientated towards penetration tools and commands on using them.
 This git contains scripts, tools & other miscellaneous commands I've taken down that I've found helpful while self learning about pen testing. 
 
-## !!! These notes are subject to change as I am constantly learning and updating them !!!     
+## These notes are subject to change as I am constantly learning and updating them !!!     
      
-## !!! This git is not yet organized, I just wanted to get this information out there !!!    
+## This git is not yet organized, I just wanted to get this information out there !!!    
     
    
 ### **Methodology:**
@@ -19,9 +19,12 @@ This git contains scripts, tools & other miscellaneous commands I've taken down 
 ### [Pen Testing Tools](https://github.com/h1dz/Pen-Testing/tree/Tools)
 Tools include; nmap, hydra, burpsuit, gobuster, metasploit, OWASP ZAP, sqlmap, John The Ripper.   
    
-### [Linux Commands](https://github.com/h1dz/Pen-Testing/tree/Commands)
+### [Linux Commands](https://github.com/h1dz/Pen-Testing/blob/Commands/Bash.md)
 Linux commands that I've found very useful.  
-    
+
+### [Powershell Commands](https://github.com/h1dz/Pen-Testing/blob/Commands/Powershell.md)
+Powershell commands that I've found very useful.
+
 ### [Bash Scripts](https://github.com/h1dz/Pen-Testing/tree/BashScripts) 
 - SMB enumeration script
 - Linux enumeration script
