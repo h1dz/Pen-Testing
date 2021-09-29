@@ -7,25 +7,30 @@
 This page will link to notes orientated towards penetration tools and commands on using them.
 This git contains scripts, tools & other miscellaneous commands I've taken down that I've found helpful while self learning about pen testing. 
 
-!!! These notes are subject to change as I am constantly learning and updating them !!!     
+## These notes are subject to change as I am constantly learning and updating them !!!     
      
-!!! This git is not yet organized, I just wanted to get this information out there !!!    
+## This git is not yet organized, I just wanted to get this information out there !!!    
     
    
 ### **Methodology:**
-### [Enumerating an IP](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enumeration.md) -----> [Enumeration 4 Priv Esc](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enum4PrivEsc.md) -----> [Priv Esc] -----> [Backdoors](https://github.com/h1dz/Pen-Testing/blob/Methodology/Backdoors.md)                      
-   
-   
+### [Enumerating an IP](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enumeration.md) -----> [Enumerating Linux](https://github.com/h1dz/Pen-Testing/blob/Methodology/LinuxEnum.md) -----> [Enumerating Windows](https://github.com/h1dz/Pen-Testing/blob/Methodology/WinEnum.md) -----> [Priv Esc] -----> [Backdoors](https://github.com/h1dz/Pen-Testing/blob/Methodology/Backdoors.md)                          
+      
    
 ### [Pen Testing Tools](https://github.com/h1dz/Pen-Testing/tree/Tools)
 Tools include; nmap, hydra, burpsuit, gobuster, metasploit, OWASP ZAP, sqlmap, John The Ripper.   
    
-### [Linux Commands](https://github.com/h1dz/Pen-Testing/tree/Commands)
+### [Linux Commands](https://github.com/h1dz/Pen-Testing/blob/Commands/Bash.md)
 Linux commands that I've found very useful.  
-    
-### [Bash Scripts](https://github.com/h1dz/Pen-Testing/tree/BashScripts)
-- Searchsploit lazy script    
+
+### [Powershell Commands](https://github.com/h1dz/Pen-Testing/blob/Commands/Powershell.md)
+Powershell commands that I've found very useful.
+
+### [Bash Scripts](https://github.com/h1dz/Pen-Testing/tree/BashScripts) 
 - SMB enumeration script
-- Priv Esc enum script
-   
-_last update: 12/09/2021_
+- Linux enumeration script
+- Windows enumeration script
+- Web enumeration script 
+- Searchsploit lazy script  
+- Scrape used to make a dictionary file for bruteforcing from sraping webpages using Cewl
+      
+_last update: 29/09/2021_
