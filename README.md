@@ -22,6 +22,6 @@ Script to enumerate a url or IP.
 Used to make a dictionary file for bruteforcing from sraping webpages using Cewl.
 
 ## searchsploitLAZY.sh
-Simple script that is for the lazy people like me, instead of having to type searchsploit <service> <version>, it just shorthands searchsploit to the letter s.   
+Simple script if you are lazy, instead of having to type searchsploit <service> <version>, it just shorthands searchsploit to the letter s.   
 -Rename to s    
 -Usage: ./s <service> <version>   
