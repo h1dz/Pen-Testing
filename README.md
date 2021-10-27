@@ -11,8 +11,7 @@ This git contains scripts, tools & other miscellaneous commands I've taken down 
      
 ## This git is not yet organized, I just wanted to get this information out there !!!    
     
-   
-### **Methodology:**
+
 ### [Enumerating an IP](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enumeration.md) -----> [Enumerating Linux](https://github.com/h1dz/Pen-Testing/blob/Methodology/LinuxEnum.md) -----> [Enumerating Windows](https://github.com/h1dz/Pen-Testing/blob/Methodology/WinEnum.md) -----> [Priv Esc] -----> [Backdoors]                          
       
    
