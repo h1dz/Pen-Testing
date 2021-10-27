@@ -31,6 +31,6 @@ Powershell commands that I've found very useful.
 - Windows enumeration script
 - Web enumeration script 
 - Searchsploit lazy script  
-- Scrape used to make a dictionary file for bruteforcing from sraping webpages using Cewl
+- Scrape used to make a dictionary file for bruteforcing from scraping webpages using Cewl
       
 _last update: 29/09/2021_
