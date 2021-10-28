@@ -11,9 +11,8 @@ This git contains scripts, tools & other miscellaneous commands I've taken down 
      
 ## This git is not yet organized, I just wanted to get this information out there !!!    
     
-   
-### **Methodology:**
-### [Enumerating an IP](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enumeration.md) -----> [Enumerating Linux](https://github.com/h1dz/Pen-Testing/blob/Methodology/LinuxEnum.md) -----> [Enumerating Windows](https://github.com/h1dz/Pen-Testing/blob/Methodology/WinEnum.md) -----> [Priv Esc] -----> [Backdoors]                     
+
+### [Enumerating an IP](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enumeration.md) -----> [Enumerating Linux](https://github.com/h1dz/Pen-Testing/blob/Methodology/LinuxEnum.md) -----> [Enumerating Windows](https://github.com/h1dz/Pen-Testing/blob/Methodology/WinEnum.md) -----> [Priv Esc] -----> [Backdoors]                          
       
    
 ### [Pen Testing Tools](https://github.com/h1dz/Pen-Testing/tree/Tools)
@@ -31,6 +30,6 @@ Powershell commands that I've found very useful.
 - Windows enumeration script
 - Web enumeration script 
 - Searchsploit lazy script  
-- Scrape used to make a dictionary file for bruteforcing from sraping webpages using Cewl
+- Scrape used to make a dictionary file for bruteforcing from scraping webpages using Cewl
       
-_last update: 29/09/2021_
+_last update: 28/10/2021_
