@@ -16,7 +16,7 @@ This git contains scripts, tools & other miscellaneous commands I've taken down 
       
    
 ### [Pen Testing Tools](https://github.com/h1dz/Pen-Testing/tree/Tools)
-Tools include; nmap, hydra, burpsuit, gobuster, metasploit, OWASP ZAP, sqlmap, John The Ripper.   
+Tools include; Nmap, Hydra, Burpsuit, Gobuster, Metasploit, OWASP ZAP, Sqlmap, John The Ripper, FUZZ, Searchsploit, Steganography, Nitko, WPScan.  
    
 ### [Linux Commands](https://github.com/h1dz/Pen-Testing/blob/Commands/Bash.md)
 Linux commands that I've found very useful.  
