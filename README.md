@@ -32,4 +32,4 @@ Powershell commands that I've found very useful.
 - Searchsploit lazy script  
 - Scrape used to make a dictionary file for bruteforcing from scraping webpages using Cewl
       
-_last update: 29/09/2021_
+_last update: 28/10/2021_
