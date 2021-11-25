@@ -13,7 +13,8 @@ This bash script will enumerate SMB shares on port 135/445 and save results to a
 Use this to enumerate information on a linux machine to help discover vulnerabilities that lead to root access.
 
 ## winenum.ps1
-Contains a basic script to enumerate information from a windows machine (non malicous).
+Contains a basic script to enumerate information from a windows machine (non malicous). The output is in a file called 0.txt that is base64 encoded.
+Remove code line 132,133,136 if you dont want the file encoded. The output file will be called 1.txt.
    
 ## web3num.sh
 Script to enumerate a url or IP.
