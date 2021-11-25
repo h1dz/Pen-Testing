@@ -1,6 +1,8 @@
 <#
 Download script:
 (New-Object System.Net.WebClient).DownloadFile("https://raw.githubusercontent.com/h1dz/Pen-Testing/BashScripts/winenum.ps1", "C:\Windows\System32\spool\drivers\color\winenum.ps1")
+To run the file with Powershell, use the command:
+& "C:\Windows\System32\spool\drivers\color\winenum.ps1"
 #>
 ################################## Setup ##################################
 $color = "C:\Windows\System32\spool\drivers\color"
