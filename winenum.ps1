@@ -5,14 +5,14 @@ Download script:
 ################################## Setup ##################################
 Set-ExecutionPolicy Bypass -Scope CurrentUser -Force
 Set-PSReadlineOption -HistorySaveStyle SaveNothing
-attrib +h winenum.ps1
+#attrib +h winenum.ps1
 Unblock-File -Path .\winenum.ps1
 New-Item -ItemType "file" -Path "C:\Windows\System32\spool\drivers\color\1.txt"
 Unblock-File -Path "C:\Windows\System32\spool\drivers\color\1.txt"
 New-Item -ItemType "file" -Path "C:\Windows\System32\spool\drivers\color\2.txt"
 Unblock-File -Path "C:\Windows\System32\spool\drivers\color\2.txt"
-attrib +h 1.txt
-attrib +h 2.txt
+#attrib +h 1.txt
+#attrib +h 2.txt
 ################################## Finshed Setup ##################################
 Write-Output "################################## Start ##################################" | Out-File -FilePath .\1.txt -Append  
 Get-Date | Out-File -FilePath .\1.txt -Append 
@@ -108,8 +108,8 @@ Get-Eventlog -list | Out-File -FilePath .\1.txt -Append
 Write-Output "##############################################################################" | Out-File -FilePath .\1.txt -Append
 Get-Date | Out-File -FilePath .\1.txt -Append 
 Write-Output "################################## Finished ##################################" | Out-File -FilePath .\1.txt -Append  
+certutil -encode "C:\Windows\System32\spool\drivers\color\1.txt" 0.txt
 Unblock-File -Path "C:\Windows\System32\spool\drivers\color\0.txt"
-powershell -ExecutionPolicy Bypass -noninteractive -nologo -File "C:\Windows\System32\spool\drivers\color\0.txt"
 attrib -h 1.txt
 attrib -h 2.txt
 Remove-Item 1.txt -Force
