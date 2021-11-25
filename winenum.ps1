@@ -23,8 +23,6 @@ whoami | Out-File -FilePath .\1.txt -Append
 Get-LocalUser | Out-File -FilePath .\1.txt -Append  
 Get-Acl C:\ | Out-File -FilePath .\1.txt -Append  
 net user | Out-File -FilePath .\1.txt -Append  
-net user /domain | Out-File -FilePath .\1.txt -Append 
-net group /domain | Out-File -FilePath .\1.txt -Append   
 Get-TimeZone | Out-File -FilePath .\1.txt -Append 
 $env:COMPUTERNAME | Out-File -FilePath .\1.txt -Append 
 $env:USERNAME | Out-File -FilePath .\1.txt -Append 
