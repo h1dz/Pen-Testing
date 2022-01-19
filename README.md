@@ -4,13 +4,10 @@
 ## **Welcome!**
  
 
-This page will link to scripts orientated towards penetration and enumeration.
-This git contains scripts I've made that I've found helpful while self learning about pen testing and conducting Capture The Flags. 
+This page will link to scripts and tool orientated towards penetration and enumeration.
+This git contains scripts that I've made and tools that I've found helpful while self learning about pen testing and conducting Capture The Flags. 
 
-## These notes are subject to change as I am constantly learning and updating them !!!     
-         
-
-### [Enumerating an IP](https://github.com/h1dz/Pen-Testing/blob/Methodology/Enumeration.md) -----> [Enumerating Linux](https://github.com/h1dz/Pen-Testing/blob/Methodology/LinuxEnum.md) -----> [Enumerating Windows](https://github.com/h1dz/Pen-Testing/blob/Methodology/WinEnum.md) -----> [Priv Esc] -----> [Backdoors]                          
+## These notes are subject to change as I am constantly learning and updating them!              
    
 ### [Pen Testing Tools](https://github.com/h1dz/Pen-Testing/tree/Tools)
 Tools include; Nmap, Hydra, Burpsuit, Gobuster, Metasploit, OWASP ZAP, Sqlmap, John The Ripper, FUZZ, Searchsploit, Steganography, Nitko, WPScan, SMB, Hash ID, Curl, Distionaries.
