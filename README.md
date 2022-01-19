@@ -9,7 +9,7 @@ This git contains scripts that I've made and tools that I've found helpful while
 
 ## These notes are subject to change as I am constantly learning and updating them!              
    
-### [Pen Testing Tools](https://github.com/h1dz/Pen-Testing/tree/Tools)
+### [Tools](https://github.com/h1dz/Pen-Testing/tree/Tools)
 Tools include; Nmap, Hydra, Burpsuit, Gobuster, Metasploit, OWASP ZAP, Sqlmap, John The Ripper, FUZZ, Searchsploit, Steganography, Nitko, WPScan, SMB, Hash ID, Curl, Distionaries.
 
 ### [Scripts](https://github.com/h1dz/Pen-Testing/tree/Scripts) 
