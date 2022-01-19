@@ -4,7 +4,7 @@
 ## **Welcome!**
  
 
-This page will link to scripts and tool orientated towards penetration and enumeration.
+This page will link to scripts and tools orientated towards penetration and enumeration.
 This git contains scripts that I've made and tools that I've found helpful while self learning about pen testing and conducting Capture The Flags. 
 
 ## These notes are subject to change as I am constantly learning and updating them!              
