@@ -17,10 +17,11 @@ sudo nmap -p445 --script=smb-enum-shares.nse,smb-enum-users.nse $1 2>/dev/null |
 sudo nmap -Pn -p445 --script=smb-enum-shares.nse,smb-enum-users.nse $1 2>/dev/null | tee -a -i smbResults
 printf "${G}\n----------------------------------CrackMapExec /OS----------------------------------\n\n${B}" | tee -a -i smbResults
 sudo crackmapexec smb $1 --shares 2>/dev/null | tee -a -i smbResults
-printf "\n----------------------------------List SMB----------------------------------\n\n${B}" | tee -a -i smbResults
+printf "${G}\\n----------------------------------List SMB----------------------------------\n\n${B}" | tee -a -i smbResults
 sudo smbclient -N -L //$1 2>/dev/null | tee -a -i smbResults
-sudo smbmap -H $1 2>/dev/null | tee -a -i smbResults 
-printf "\n----------------------------------Check Null Login----------------------------------\n\n${B}" | tee -a -i smbResults
+sudo smbmap -H $1 2>/dev/null | tee -a -i smbResults
+sudo enum4linux -A $1 2>/dev/null | tee -a -i smbResults 
+printf "${G}\\n----------------------------------Check Null Login----------------------------------\n\n${B}" | tee -a -i smbResults
 sudo smblient \\\\$1\\wwwroot 2>/dev/null | tee -a -i smbResults
 sudo smbget -R smb://$1/anonymous 2>/dev/null | tee -a -i smbResults
 sudo smbclient \\\\$1\\ -U Administrator 2>/dev/null | tee -a -i smbResults
