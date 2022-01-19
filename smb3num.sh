@@ -1,6 +1,7 @@
 #!/bin/bash
 #Script for enumerating SMB port 445 with no credentials
-#Usage:                   ./smb3num <ip>
+#Run with sudo
+#Usage:                   sudo ./smb3num <ip>
 B='\033[0;96m' #${B}
 G='\033[0;92m' #${G}
 R='\033[0;91m' #${R}
