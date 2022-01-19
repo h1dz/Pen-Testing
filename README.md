@@ -16,7 +16,7 @@ Tools include; Nmap, Hydra, Burpsuit, Gobuster, Metasploit, OWASP ZAP, Sqlmap, J
 - SMB enumeration script
 - Linux enumeration script
 - Windows enumeration script
-- Web/IP enumeration script 
+- IP enumeration script 
 - Searchsploit lazy script  
 - Scrape used to make a dictionary file for bruteforcing from scraping webpages using Cewl
 - Scrape2 another way to make a dictionary file
