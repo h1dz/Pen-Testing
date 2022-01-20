@@ -6,7 +6,16 @@ B='\033[0;96m' #${B}
 G='\033[0;92m' #${G}
 R='\033[0;91m' #${R}
 Y='\033[0;33m' #${Y}
+D='\033[5;35m' #${D}
 N='\033[0m'    #${N}
+printf "${D}|-------------------------------|\n" | tee -a -i priv 
+printf "|                               |\n" | tee -a -i priv
+printf "|                               |\n" | tee -a -i priv
+printf "|        IP 3numeration         |\n" | tee -a -i priv
+printf "|             -H1dz             |\n" | tee -a -i priv
+printf "|                               |\n" | tee -a -i priv
+printf "|                               |\n" | tee -a -i priv
+printf "|-------------------------------|\n\n${N}" | tee -a -i priv
 if [ "$2" == "-q" ]
 then
 printf "${Y}\nQuick Scan...\n\n" | tee -a -i scanresultsQ
