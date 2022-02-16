@@ -22,4 +22,4 @@ Tools include; Nmap, Hydra, Burpsuit, Gobuster, Metasploit, OWASP ZAP, Sqlmap, J
 - Scrape2 another way to make a dictionary file
 - Ping script to get a better idea what operating system the host is running and if it is up
    
-_last update: 19/01/2022_
+_last update: 16/02/2022_
