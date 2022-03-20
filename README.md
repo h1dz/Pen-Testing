@@ -22,8 +22,8 @@ Script to enumerate a url or IP.
 ## scrape.sh
 Used to make a dictionary file for bruteforcing from sraping webpages using Cewl.
 
-## scrape2.sh
-Used to make a dictionary file for bruteforcing from sraping webpages using Cewl.
+## url2dict.sh
+Used to make a dictionary file for bruteforcing using html2dic.
 
 ## searchsploitLAZY.sh
 Simple script if you are lazy, instead of having to type searchsploit <service> <version>, it just shorthands searchsploit to the letter s.   
