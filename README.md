@@ -29,7 +29,7 @@ Used to make a dictionary file for bruteforcing from sraping webpages using Cewl
 Simple script if you are lazy, instead of having to type searchsploit <service> <version>, it just shorthands searchsploit to the letter s.   
 -Rename to s    
 -Usage: `./s <service> <version>`   
-   OR
+   OR  
 Just add the following to your aliases:     `alias s='searchsploit'`
    
 ## ping.sh
