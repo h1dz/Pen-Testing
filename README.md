@@ -39,3 +39,7 @@ Ping script to get a better idea what operating system the host is running and i
 ## nmap.sh
 Script for nmap that I regulary use, will first scan for top 100 ports, followed by a full TCP port scan. Next will scan top UDP ports, followed by a full UPD port scan.  
 -Usage:     `./nmap.sh <ip>`
+   
+## gobuster.sh
+Runs gobuster scans with different wordlists, will take a while to get through all of them. Just something you can run in the background.  
+-Usage      `./gubster.sh <ip>`
