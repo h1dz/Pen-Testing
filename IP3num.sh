@@ -1,7 +1,7 @@
 #!/bin/bash
 #-f for a full scan
 #-d for a domain scan
-#Syntax: ./ipEnum.sh <ip> -f (fullscan) or -d (domainscan)
+#Syntax: ./ipEnum.sh <ip> -f or -d
 clear
 B='\033[0;96m' #${B}
 G='\033[0;92m' #${G}
