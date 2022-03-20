@@ -31,4 +31,8 @@ Simple script if you are lazy, instead of having to type searchsploit <service> 
 -Usage: `./s <service> <version>`   
    
 ## ping.sh
-Ping script to get a better idea what operating system the host is running and if it is up
+Ping script to get a better idea what operating system the host is running and if it is up  
+      
+## nmap.sh
+Script for nmap that I regulary use, will first scan for top 100 ports, followed by a full TCP port scan. Next will scan top UDP ports, followed by a full UPD port scan.
+-Usage:     ./nmap.sh <ip>
