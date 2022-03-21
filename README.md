@@ -9,10 +9,10 @@ This bash script will enumerate SMB shares on port 445 and save results to a .tx
 -share info     
 -checks writeable shares 
 
-## lin3num.sh
+## lin3num.sh *****CHANGING******
 Use this to enumerate information on a linux machine to help discover vulnerabilities and information that could lead to root access.
 
-## win3num.ps1
+## win3num.ps1 *****CHANGING******
 Contains a basic script to enumerate information from a windows machine (non malicous). The output is in a file called 0.txt that is base64 encoded.
 Remove code line 132,133,136 if you dont want the file encoded. The output file will be called 1.txt.
    
