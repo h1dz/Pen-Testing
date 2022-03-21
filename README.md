@@ -15,12 +15,14 @@ This page will link to scripts I have made that are orientated towards penetrati
 - IP enumeration script 
 - Searchsploit lazy script  
 - Scrape used to make a dictionary file for bruteforcing from scraping webpages using Cewl
-- Scrape2 another way to make a dictionary file
+- Make a dictionary file for bruteforcing using a URL.
 - Ping script to get a better idea what operating system the host is running and if it is up
+- Gobuster enumeration script  
+- Nmap enumeration script  
 
 ## Check out my Gitbooks page 
 ### [GitBooks](https://github.com/h1dz/Pen-Testing/)  
   
     
    
-_last update: 20/03/2022_
+_last update: 21/03/2022_
