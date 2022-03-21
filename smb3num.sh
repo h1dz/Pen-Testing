@@ -18,6 +18,7 @@ nmap -p445 --script=smb-enum-shares.nse,smb-enum-users.nse $1 2>/dev/null | tee 
 nmap -Pn -p445 --script=smb-enum-shares.nse,smb-enum-users.nse $1 2>/dev/null | tee -a -i smbResults
 printf "${G}\n----------------------------------CrackMapExec /OS----------------------------------\n\n${B}" | tee -a -i smbResults
 crackmapexec smb $1 --shares 2>/dev/null | tee -a -i smbResults
+crackmapexec smb $1 --pass-pol 2>/dev/null | tee -a -i smbResults
 printf "${G}\\n----------------------------------List SMB----------------------------------\n\n${B}" | tee -a -i smbResults
 smbclient -N -L //$1 2>/dev/null | tee -a -i smbResults
 smbmap -H $1 2>/dev/null | tee -a -i smbResults 
@@ -28,11 +29,11 @@ smbget -R smb://$1/anonymous 2>/dev/null | tee -a -i smbResults
 smbclient \\\\$1\\ -U Administrator 2>/dev/null | tee -a -i smbResults
 smbget -R smb://$1/guest 2>/dev/null | tee -a -i smbResults
 crackmapexec smb $1 -u '' -p '' 2>/dev/null | tee -a -i smbResults
-printf "${G}\n----------------------------------RPC----------------------------------\n\n${B}" | tee -a -i smbResults
-rpcclient -U "" -N $1 2>/dev/null | tee -a -i smbResults
-rpcinfo -s $1 2>/dev/null | tee -a -i smbResults
-printf "${G}\n----------------------------------NBT----------------------------------\n\n${B}" | tee -a -i smbResults
-nbtscan $1 2>/dev/null | tee -a -i smbResults
+printf "${G}\\n----------------------------------Try the following----------------------------------\n\n${B}" | tee -a -i smbResults
+echo "Try connect to a share, try no creds first and then with user/pass"
+echo "Try upload reverse shell into a writeable share or try with a bash reverse shell"
+echo "Try upload SCF file"
+echo "Try NULL logins"
 printf "${G}\n----------------------------------Finished----------------------------------\n\n${Y}" | tee -a -i smbResults
 date | tee -a -i smbResults
 clear
