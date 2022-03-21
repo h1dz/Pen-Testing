@@ -4,7 +4,7 @@ The following scripts are not final versions as of yet, but still work fine.
 For the linux bash scripts you will need to make sure you run `chmod +x <script.sh>` first to make them executable.
   
 ## smb3num.sh
-This bash script will enumerate SMB shares on port 135/445 and save results to a .txt file.   
+This bash script will enumerate SMB shares on port 445 and save results to a .txt file.   
 -lists shares   
 -share info     
 -checks writeable shares 
