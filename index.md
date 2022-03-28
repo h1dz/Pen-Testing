@@ -10,8 +10,6 @@ This page will link to scripts I have made that are orientated towards penetrati
 
 ### [Scripts](https://github.com/h1dz/Pen-Testing/tree/Scripts) 
 - SMB enumeration script
-- Linux enumeration script
-- Windows enumeration script
 - IP enumeration script 
 - Searchsploit lazy script  
 - Scrape used to make a dictionary file for bruteforcing from scraping webpages using Cewl
@@ -25,4 +23,4 @@ This page will link to scripts I have made that are orientated towards penetrati
   
     
    
-_last update: 21/03/2022_
+_last update: 28/03/2022_
