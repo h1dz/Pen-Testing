@@ -19,7 +19,7 @@ This page will link to scripts I have made that are orientated towards penetrati
 - Nmap enumeration script  
 
 ## Check out my Gitbooks page 
-### [GitBooks](https://github.com/h1dz/Pen-Testing/)  
+### [GitBooks](https://h1dz.gitbook.io/pen-testing/)  
   
     
    
