@@ -2,6 +2,7 @@
    
 The following scripts are not final versions as of yet, but still work fine.
 For the linux bash scripts you will need to make sure you run `chmod +x <script.sh>` first to make them executable.
+Check wordlist paths to make sure they are the same as yours otherwise will result in a error.  
   
 ## smb3num.sh
 This bash script will enumerate SMB shares on port 445 and save results to a .txt file.   
@@ -9,14 +10,8 @@ This bash script will enumerate SMB shares on port 445 and save results to a .tx
 -share info     
 -checks writeable shares 
 
-## lin3num.sh *****CHANGING******
-Use this to enumerate information on a linux machine to help discover vulnerabilities and information that could lead to root access.
-
-## win3num.ps1 *****CHANGING******
-Contains a basic script to enumerate information from a windows machine (non malicous).  
-   
-## IP3num.sh
-Script to enumerate a url or IP.
+## Vhosts.sh  
+Use this script to scan for virtual hosts with gobuster. Change the wordlist paths if different to mine.  
 
 ## scrape.sh
 Used to make a dictionary file for bruteforcing from sraping webpages using Cewl.
@@ -37,3 +32,6 @@ Script for nmap/masscan that I regulary use to scan all ports as fast as possibl
 Runs gobuster scans with different wordlists, will take a while to get through all of them. Just something you can run in the background. Change line 23 if your wordlists are in a different path than mine.   
 -Usage      `./gobster.sh <ip>`  
             `./gobuster.sh <ip> <extensions>`
+           
+## setup.sh  
+Setups kali after a fresh install with the tools and scripts I use.  
