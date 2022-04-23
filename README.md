@@ -29,9 +29,9 @@ Used to make a dictionary file for bruteforcing using a URL.
 Ping script to get a better idea what operating system the host is running and if it is up.  
 -Usage:     `./ping.sh <ip>`
       
-## nmap.sh
-Script for nmap/masscan that I regulary use to scan all ports as fast as possible.  
--Usage:     `./nmap.sh <ip>`
+## PortScan.sh
+Script for nmap/masscan that I regulary use to scan all ports as fast as possible. Will first output a quick scan result then proceed to do a full scan.  
+-Usage:     `./PortScan.sh <ip>`
    
 ## gobuster.sh
 Runs gobuster scans with different wordlists, will take a while to get through all of them. Just something you can run in the background. Change line 23 if your wordlists are in a different path than mine.   
