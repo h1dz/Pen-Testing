@@ -34,6 +34,6 @@ Script for nmap/masscan that I regulary use to scan all ports as fast as possibl
 -Usage:     `./nmap.sh <ip>`
    
 ## gobuster.sh
-Runs gobuster scans with different wordlists, will take a while to get through all of them. Just something you can run in the background.  
+Runs gobuster scans with different wordlists, will take a while to get through all of them. Just something you can run in the background. Change line 22 if your wordlists are in a different path than mine.   
 -Usage      `./gobster.sh <ip>`  
             `./gobuster.sh <ip> <extensions>`
