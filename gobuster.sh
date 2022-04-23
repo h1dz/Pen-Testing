@@ -1,37 +1,38 @@
 #!/bin/bash
-rm -rf scangobuster 2>/dev/null
+#http://<url/ip> <extenstions>
+echo "Usage: gob.sh http://<ip> .php,.html,.log,.txt,.sh,.asp,.aspx,.bak,.py"
+rm -rf Gobuster_DUMP.txt GobusterExt_DUMP.txt GobusterVhost_DUMP.txt 2>/dev/null
 clear
 B='\033[0;96m' #${B}
 G='\033[0;92m' #${G}
 R='\033[0;91m' #${R}
 Y='\033[0;33m' #${Y}
 N='\033[0m'    #${N}
-printf "${Y}\nGobuster Scans Initiated...\n\n" | tee -a -i scangobuster
-date 2>/dev/null | tee -a -i scangobuster
-printf ${Y}"\nIP = "$1 | tee -a -i scangobuster
-printf "${B}\n\n----------------------------------Gobuster Quick----------------------------------\n\n${G}" | tee -a -i scangobuster
-gobuster dir -u $1 -w /usr/share/wordlists/dirb/common.txt -k -e -q -f 2>/dev/null | tee -a -i scangobuster
-printf "${B}\n\n----------------------------------Gobuster Filetypes 1----------------------------------\n\n${G}" | tee -a -i scangobuster
-gobuster dir -u $1 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -k -e -q -f -x txt,php,html 2>/dev/null | tee -a -i scangobuster
-printf "${B}\n----------------------------------Gobuster Filetypes 2----------------------------------\n\n${G}" | tee -a -i scangobuster
-gobuster dir -u $1 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -k -e -q -f -x .sh,log,bak,py 2>/dev/null | tee -a -i scangobuster
-printf "${B}\n----------------------------------Gobuster Filetypes 3----------------------------------\n\n${G}" | tee -a -i scangobuster
-gobuster dir -u $1 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -k -e -q -f -x asp,aspx,db 2>/dev/null | tee -a -i scangobuster
-printf "${B}\n----------------------------------Gobuster DIR Common----------------------------------\n\n${G}" | tee -a -i scangobuster
-gobuster dir -u $1 -w /usr/share/wordlists/dirb/common.txt -k -e -q -f 2>/dev/null | tee -a -i scangobuster
-printf "${B}\n----------------------------------Gobuster DIR Medium----------------------------------\n\n${G}" | tee -a -i scangobuster
-gobuster dir -u $1 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -k -e -q -f 2>/dev/null | tee -a -i scangobuster
-printf "${B}\n----------------------------------Gobuster DIR Raft----------------------------------\n\n${G}" | tee -a -i scangobuster
-sgobuster dir -u $1 -w /usr/share/wordlists/seclists/Discovery/Web-Content/raft-large-directories.txt -k -e -q -f 2>/dev/null | tee -a -i scangobuster
-printf "${B}\n----------------------------------Gobuster DIR Big----------------------------------\n\n${G}" | tee -a -i scangobuster
-gobuster dir -u $1 -w /usr/share/wordlists/dirb/big.txt -k -e -q -f 2>/dev/null | tee -a -i scangobuster
-printf "${B}\n----------------------------------Gobuster DIR Disallowed1----------------------------------\n\n${G}" | tee -a -i scangobuster
-gobuster dir -u $1 -w /usr/share/wordlists/disallowed1-short.txt -k -e -q -f 2>/dev/null | tee -a -i scangobuster
-printf "${R}\n----------------------------------Gobuster VHOST----------------------------------\n\n${Y}" | tee -a -i scangobuster
-gobuster vhost -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt -u $1 2>/dev/null | tee -a -i scangobuster
-printf "${B}\n----------------------------------Gobuster DNS----------------------------------\n\n${G}" | tee -a -i scangobuster
-gobuster dns $1 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt -i 2>/dev/null | tee -a -i scangobuster
-printf "${B}\n----------------------------------Finished----------------------------------\n\n${Y}" | tee -a -i scangobuster
-date 2>/dev/null | tee -a -i scangobuster
+printf "${Y}\nGobuster...\n\n" | tee -a -i Gobuster_DUMP.txt
+date 2>/dev/null | tee -a -i Gobuster_DUMP.txt
+date 2>/dev/null | tee -a -i GobusterExt_DUMP.txt
+printf ${Y}"\nIP = "$1 | tee -a -i Gobuster_DUMP.txt
+printf "${Y}\nExtensions to try: .php,.html,.log,.txt,.sh,.asp,.aspx,bak,.py\n\n" | tee -a -i Gobuster_DUMP.txt
+printf "${B}\n\n----------------------------------Directory Scans Initiated----------------------------------\n\n${G}" | tee -a -i Gobuster_DUMP.txt
+
+if [ $# -eq 0 ]; then
+    echo "Usage: ./gob.sh http://<url/ip> <extenstions> (Extensions to try: .php,.html.log,.txt,.sh,.asp,.aspx,.bak,.py)"
+    exit 1
+fi
+
+for f in /usr/share/wordlists/dirb/common.txt /usr/share/wordlists/dirb/big.txt /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt /usr/share/wordlists/seclists/Discovery/Web-Content/raft-large-directories-lowercase.txt /usr/share/wordlists/seclists/Discovery/Web-Content/raft-large-words-lowercase.txt
+do
+tput setaf 6; echo "--------------------------------------------------------------------------------------------------------------"
+  echo "Scanning: " $f
+  echo "Extensions: " $2
+  if [ -z "$2" ]; then
+    gobuster dir -q -f -k -e --url $1 --wordlist $f 2>/dev/null | tee -a -i Gobusterscan.txt
+  else
+    gobuster  dir -q -f -k -e --url $1 --wordlist $f -x $2 | tee -a -i GobusterExt_DUMP.txt
+fi
+done
+date 2>/dev/null | tee -a -i Gobuster_DUMP.txt
+date 2>/dev/null | tee -a -i GobusterExt_DUMP.txt
 clear
-cat scangobuster
+cat Gobuster_DUMP.txt
+cat GobusterExt_DUMP.txt
