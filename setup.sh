@@ -3,7 +3,8 @@ cd /home/kali/
 sudo rm -rf Documents/ Videos/ Pictures/ Music/ Templates/ Public/
 mkdir Tools
 mkdir ctf
-sudo apt-get update -y; sudo apt-get upgrade -y
+sudo apt-get update -y
+sudo apt-get upgrade -y
 sudo apt-get install gedit -y
 sudo apt-get install rlwrap -y
 sudo gem install haiti-hash -y
