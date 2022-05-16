@@ -38,4 +38,5 @@ Setups kali after a fresh install with the tools and scripts I use.
    
 ## MonthAndYear.py
 Creates 2 wordlists, one with Month + year (i.e May1980) and another with Season + Year (i.e Winter2020).  
+-Usage     `python wordlist.py`
   
