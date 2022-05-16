@@ -35,3 +35,7 @@ Runs gobuster scans with different wordlists, will take a while to get through a
            
 ## setup.sh  
 Setups kali after a fresh install with the tools and scripts I use.  
+   
+## MonthAndYear.py
+Creates a wordlist with every Month + year (i.e May1980).  
+  
