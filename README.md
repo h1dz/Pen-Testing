@@ -34,7 +34,7 @@ Runs gobuster scans with different wordlists, will take a while to get through a
             `./gobuster.sh <ip> <extensions>`
            
 ## setup.sh  
-Setups kali after a fresh install with the tools and scripts I use.  
+Setup kali after a fresh install with the tools and scripts I use.  
    
 ## Wordlist.py
 Creates 2 wordlists, one with Month + year (i.e May1980) and another with Season + Year (i.e Winter2020).  
