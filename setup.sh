@@ -2,7 +2,7 @@
 cd /home/kali/
 sudo rm -rf Documents/ Videos/ Pictures/ Music/ Templates/ Public/
 sudo mkdir Tools
-sudo mkdir ctf
+sudo mkdir home
 sudo apt-get update -y 
 sudo apt-get upgrade -y
 sudo apt-get install gedit -y
@@ -54,7 +54,7 @@ wget https://raw.githubusercontent.com/SecureAuthCorp/impacket/master/examples/m
 git clone https://github.com/s0md3v/XSStrike
 git clone https://github.com/dievus/msdorkdump.git
 wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/Wordlist.py  #web?
-cd /home/kali/ctf/
+cd /home/kali/home/
 wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/PortScan.sh; chmod +x PortScan.sh
 wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/Vhosts.sh; chmod +x Vhosts.sh
 wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/gobuster.sh; chmod +x gobuster.sh
@@ -65,7 +65,9 @@ tput setaf 5; echo "Manual Install: https://github.com/carlospolop/PEASS-ng/rele
 tput setaf 5; echo "Manual Install: https://github.com/jpillora/chisel/releases/download/v1.7.3/chisel_1.7.3_linux_amd64.gz"
 tput setaf 5; echo "Manual Install: https://github.com/jpillora/chisel/releases/download/v1.7.3/chisel_1.7.3_windows_amd64.gz"
 tput setaf 5; echo "Manual Install: https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64"
-echo "mv kerbrute_linux_amd64 kerbrute; chmod +x kerbrute"
+tput setaf 5; echo "mv kerbrute_linux_amd64 kerbrute; chmod +x kerbrute"
 tput setaf 5; echo "Manual Install: https://github.com/h1dz/Windows-Tools/raw/master/mimikatz.exe"
 tput setaf 5; echo "Manual Install: https://github.com/h1dz/Windows-Tools/raw/master/sharphound.exe"
-tput setaf 3; echo "Update Complete"
+tput setaf 5; echo "Manual Install: https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotato.exe"
+tput setaf 5; echo "Manual Install: https://github.com/antonioCoco/RoguePotato/releases/download/1.0/RoguePotato.zip"
+tput setaf 3; echo "Updates Complete!"
