@@ -64,6 +64,7 @@ tput setaf 5; echo "Manual Install: https://github.com/DominicBreuker/pspy/relea
 tput setaf 5; echo "Manual Install: https://github.com/carlospolop/PEASS-ng/releases/download/20220203/winPEASx64.exe"
 tput setaf 5; echo "Manual Install: https://github.com/jpillora/chisel/releases/download/v1.7.3/chisel_1.7.3_linux_amd64.gz"
 tput setaf 5; echo "Manual Install: https://github.com/jpillora/chisel/releases/download/v1.7.3/chisel_1.7.3_windows_amd64.gz"
+tput setaf 5; echo "gunzip -d *.gz"
 tput setaf 5; echo "Manual Install: https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64"
 tput setaf 5; echo "mv kerbrute_linux_amd64 kerbrute; chmod +x kerbrute"
 tput setaf 5; echo "Manual Install: https://github.com/h1dz/Windows-Tools/raw/master/mimikatz.exe"
