@@ -44,3 +44,4 @@ printf "${G}\n----------------------------------Finished------------------------
 date | tee -a -i smbResults
 clear
 cat smbResults
+cat sharesSMB.txt 
