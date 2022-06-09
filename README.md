@@ -12,20 +12,19 @@ This bash script will enumerate SMB shares on port 445 and save results to a .tx
 
 ## Vhosts.sh  
 Use this script to scan for virtual hosts with gobuster. Change the wordlist paths if different to mine.  
--Usage:       `./vhosts.sh <IP/Domain>`
+-Usage:       `./vhosts.sh <IP/Domain>`    
 
 ## scrape.sh
 Used to make a dictionary file for bruteforcing from sraping webpages using Cewl.
 -Usage:       `./scrape.sh <IP/URL> <depth>`
 
 ## url2dict.sh
-Used to make a dictionary file for bruteforcing using a URL.  
+Used to make a dictionary file for bruteforcing using a URL.    
 -Usage:       `./url2dict.sh <url>`  
    
 ## ping.sh
-Ping script to get a better idea what operating system the host is running and if it is up, this is not 100%, just a close recommendation on what OS it probably is.  
-I use it within an automation script when scanning an IP, have it run first so you can confirm the host is live.
--Usage:     `./ping.sh <ip>`
+Ping script to get a better idea what operating system the host is running and if it is up, this is not 100%, just a close recommendation on what OS it probably is. I use it within an automation script when scanning an IP, have it run first so you can confirm the host is live.   
+-Usage:     `./ping.sh <ip>`   
       
 ## PortScan.sh
 Script for nmap/masscan that I regulary use to scan all ports as fast as possible. Will first output a quick scan result then proceed to do a full scan.  
