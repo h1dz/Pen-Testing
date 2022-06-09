@@ -6,8 +6,6 @@ rm -rf masscan1.txt 2>/dev/null
 rm -rf masscan2.txt 2>/dev/null
 rm -rf masscan3.txt 2>/dev/null
 rm -rf masscan4.txt 2>/dev/null
-/home/kali/ctf/ping.sh $1
-tput sgr0; echo ""
 tput setaf 3; printf "============================================ TCP SCAN ============================================\n"
 date | tee -a -i ports2.txt
 tput sgr0; 
