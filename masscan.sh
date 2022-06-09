@@ -6,18 +6,24 @@ rm -rf masscan1.txt 2>/dev/null
 rm -rf masscan2.txt 2>/dev/null
 rm -rf masscan3.txt 2>/dev/null
 rm -rf masscan4.txt 2>/dev/null
+/home/kali/ctf/ping.sh $1
+tput sgr0; echo ""
 tput setaf 3; printf "============================================ TCP SCAN ============================================\n"
 date | tee -a -i ports2.txt
 tput sgr0; 
 sudo masscan -e tun0 -p1-65535 --open-only --interactive --rate=500 $1 | tee -a -i masscan1.txt
-ports1=$(cat masscan1.txt | sed s/'Discovered open port //' | awk -F/ '{print $1}' | awk '!seen[$0]++' ORS=',' | sort); cat $ports1 > ports2.txt 2>/dev/null
+printf "===== TCP SCAN STARTED =====" | tee -a -i ports2.txt
+ports1=$(cat masscan1.txt | sed s/'Discovered open port //' | awk -F/ '{print $1}' | awk '!seen[$0]++' ORS=',' | sort); cat $ports1 >> ports2.txt 2>/dev/null
+printf "===== TCP SCAN FINISHED =====" | tee -a -i ports2.txt
 rm -rf masscan1.txt 2>/dev/null
 tput setaf 3; printf "============================================ UDP SCAN ============================================\n"
 tput sgr0;
 sudo masscan -e tun0 --ports U:1-65535 --open-only --interactive --rate=500 $1 | tee -a -i masscan2.txt
+printf "===== UDP SCAN STARTED =====" | tee -a -i ports2.txt
 ports2=$(cat masscan2.txt | sed s/'Discovered open port //' | awk -F/ '{print $1}' | awk '!seen[$0]++' ORS=',' | sort); cat $ports2 >> ports2.txt 2>/dev/null
-rm -rf masscan2.txt 2>/dev/null
+printf "===== UDP SCAN FINISHED =====" | tee -a -i ports2.txt
 date | tee -a -i ports2.txt
+rm -rf masscan2.txt 2>/dev/null
 clear
 cat ports2.txt 2>/dev/null
 tput setaf 5; printf "Do you want to re-check the scans but slower?   yes/no"
@@ -28,12 +34,16 @@ tput setaf 3; printf "============================================ FINAL/RE-CHEC
 date | tee -a -i ports3.txt
 tput sgr0; 
 sudo masscan -e tun0 -p1-65535 --interactive $1 | tee -a -i masscan3.txt
-ports3=$(cat masscan3.txt | sed s/'Discovered open port //' | awk -F/ '{print $1}' | awk '!seen[$0]++' ORS=',' | sort); cat $ports3 > ports3.txt 2>/dev/null
+printf "===== TCP SCAN STARTED =====" | tee -a -i ports3.txt
+ports3=$(cat masscan3.txt | sed s/'Discovered open port //' | awk -F/ '{print $1}' | awk '!seen[$0]++' ORS=',' | sort); cat $ports3 >> ports3.txt 2>/dev/null
+printf "===== TCP SCAN FINISHED =====" | tee -a -i ports3.txt
 rm -rf masscan3.txt 2>/dev/null
 sudo masscan -e tun0 --ports U:1-65535 --interactive $1 | tee -a -i masscan4.txt
+printf "===== UDP SCAN STARTED =====" | tee -a -i ports3.txt
 ports4=$(cat masscan4.txt | sed s/'Discovered open port //' | awk -F/ '{print $1}' | awk '!seen[$0]++' ORS=',' | sort); cat $ports4 >> ports3.txt 2>/dev/null
-rm -rf masscan4.txt 2>/dev/null
+printf "===== UDP SCAN FINISHED =====" | tee -a -i ports3.txt
 date | tee -a -i ports3.txt
+rm -rf masscan4.txt 2>/dev/null
 clear
 tput setaf 3; printf "============================================ First Scan ============================================\n"
 tput sgr0; 
