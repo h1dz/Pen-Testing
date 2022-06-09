@@ -15,7 +15,7 @@ Use this script to scan for virtual hosts with gobuster. Change the wordlist pat
 -Usage:       `./vhosts.sh <IP/Domain>`    
 
 ## scrape.sh
-Used to make a dictionary file for bruteforcing from sraping webpages using Cewl.
+Used to make a dictionary file for bruteforcing from sraping webpages using Cewl.   
 -Usage:       `./scrape.sh <IP/URL> <depth>`
 
 ## url2dict.sh
