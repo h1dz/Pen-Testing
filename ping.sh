@@ -5,21 +5,29 @@ P='\033[4;35m' #${P} purple
 N='\033[0m'    #${N} null
 var1=$(ping $1 -c 1 -W 3 | grep "64 bytes" | cut -d " " -f 6)
 if [[ "$var1" -eq "ttl=63" ]]; then
-printf "Host is ${G}LIVE!${N} Most likely running: ${P}Linux OS${N}"
+tput bold; printf "Host is ${G}LIVE!${N}\n"
+printf "Most likely running: ${P}Linux OS${N}"
 elif [[ "$var1" -eq "ttl=64" ]]; then
-printf "Host is ${G}LIVE!${N} Most likely running: ${P}Linux OS${N}"
+tput bold; printf "Host is ${G}LIVE!${N}\n"
+printf "Most likely running: ${P}Linux OS${N}"
 elif [[ "$var1" -eq "ttl=127" ]]; then
-printf "Host is ${G}LIVE!${N} Most likely running: ${P}Windows OS${N}"
+tput bold; printf "Host is ${G}LIVE!${N}\n"
+printf "Most likely running: ${P}Windows OS${N}"
 elif [[ "$var1" -eq "ttl=128" ]]; then
-printf "Host is ${G}LIVE!${N} Most likely running: ${P}Windows OS${N}"
+tput bold; printf "Host is ${G}LIVE!${N}\n"
+printf "Most likely running: ${P}Windows OS${N}"
 elif [[ "$var1" -eq "ttl=31" ]]; then
-printf "Host is ${G}LIVE!${N} Most likely running: ${P}Windows 95 OS${N}"
+tput bold; printf "Host is ${G}LIVE!${N}\n"
+printf "Most likely running: ${P}Windows 95 OS${N}"
 elif [[ "$var1" -eq "ttl=32" ]]; then
-printf "Host is ${G}LIVE!${N} Most likely running: ${P}Windows 95 OS${N}"
+tput bold; printf "Host is ${G}LIVE!${N}\n"
+printf "Most likely running: ${P}Windows 95 OS${N}"
 elif [[ "$var1" -eq "ttl=255" ]]; then
-printf "Host is ${G}LIVE!${N} Most likely running: ${P}MAC / OPENBSD / CISCO / SOLARIS OS${N}"
+tput bold; printf "Host is ${G}LIVE!${N}\n"
+printf "Most likely running: ${P}MAC / OPENBSD / CISCO / SOLARIS OS${N}"
 elif [[ "$var1" -eq "ttl=254" ]]; then
-printf "Host is ${G}LIVE!${N} Most likely running: ${P}MAC / OPENBSD / CISCO / SOLARIS OS${N}"
+tput bold; printf "Host is ${G}LIVE!${N}\n"
+printf "Most likely running: ${P}MAC / OPENBSD / CISCO / SOLARIS OS${N}"
 elif [[ "$var1" == "" ]]; then
-printf "Host appears to be ${R}DOWN!${N}"
+tput bold; printf "Host appears to be ${R}DOWN!${N}"
 fi
