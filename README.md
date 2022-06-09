@@ -40,5 +40,9 @@ Setup kali after a fresh install with the tools and scripts I use.
    
 ## Wordlist.py
 Creates 2 wordlists, one with Month + year (i.e May1980) and another with Season + Year (i.e Winter2020).  
--Usage     `python wordlist.py`
+-Usage     `python wordlist.py`   
+   
+## masscan.sh
+Runs masscan scanning both TCP and UDP, asks for option to re-run the scans at a slower pace.   
+-Usage     `./masscan.sh <IP>`   
   
