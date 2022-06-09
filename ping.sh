@@ -29,5 +29,5 @@ elif [[ "$var1" -eq "ttl=254" ]]; then
 tput bold; printf "Host is ${G}LIVE!${N}\n"
 printf "Most likely running: ${P}MAC / OPENBSD / CISCO / SOLARIS OS${N}"
 elif [[ "$var1" == "" ]]; then
-tput bold; printf "Host appears to be ${R}DOWN!${N}"
+tput bold; printf "Host appears to be  ${R}DOWN!${N}"
 fi
