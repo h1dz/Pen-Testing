@@ -22,8 +22,7 @@ for server in $(host -t ns $2 | cut -d " " -f4); do host -l $2 $server | grep "h
 subfinder -d $2
 amass enum -d $2
 echo "Bruteforcing subdomains..."
-wfuzz -c -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt -u http://$2 -v -H "Host:FUZZ.$2"
-gobuster vhost -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1mil-5000.txt -u $1 -k
+gobuster vhost -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt -u $1 -k
 echo "Try reverse-dns: https://whois.domaintools.com"
 echo "Bruteforcing domains, will take a while..."
 dnsrecon -d $2 -D /usr/share/wordlists/seclists/Discovery/DNS/dns-Jhaddix.txt -t brt
