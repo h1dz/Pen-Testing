@@ -45,4 +45,8 @@ Creates 2 wordlists, one with Month + year (i.e May1980) and another with Season
 ## masscan.sh
 Runs masscan scanning both TCP and UDP, asks for option to re-run the scans at a slower pace.   
 -Usage     `./masscan.sh <IP>`   
+   
+## dnsenum.sh   
+Runs many different commands with a large output to sift through for enumerating dns.   
+-Usage     `sudo ./dnsenum.sh <RHOST> <domain>`   
   
