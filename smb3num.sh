@@ -32,6 +32,7 @@ smbclient \\\\$1\\ -U Administrator 2>/dev/null | tee -a -i smbResults
 smbget -R smb://$1/guest 2>/dev/null | tee -a -i smbResults
 crackmapexec smb $1 -u '' -p '' 2>/dev/null | tee -a -i smbResults
 printf "${G}\n----------------------------------Check RPC info----------------------------------\n\n${B}" | tee -a -i smbResults
+rpcclint -U '' --no-pass 'querydispinfo' $1  > data.txt; cat data.txt | awk --field-seperator 'Account: ' '{print $2}' | awk --field-seperator ' ' '{print $1}'
 rpcclient -U "" -N $1 2>/dev/null | tee -a -i smbResults
 printf "${G}\\n----------------------------------Try the following----------------------------------\n\n${B}" | tee -a -i smbResults
 echo "Try connect to a share, try no creds first and then with user/pass"
@@ -44,4 +45,4 @@ printf "${G}\n----------------------------------Finished------------------------
 date | tee -a -i smbResults
 clear
 cat smbResults
-cat sharesSMB.txt 
+cat sharesSMB.txt
