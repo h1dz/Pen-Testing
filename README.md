@@ -43,7 +43,7 @@ Creates 2 wordlists, one with Month + year (i.e May1980) and another with Season
 -Usage     `python wordlist.py`   
    
 ## masscan.sh
-Runs masscan scanning both TCP and UDP, asks for option to re-run the scans at a slower pace.   
+Runs masscan scanning both TCP and UDP.   
 -Usage     `./masscan.sh <IP>`   
    
 ## dnsenum.sh   
