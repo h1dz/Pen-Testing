@@ -17,6 +17,8 @@ sudo apt-get install dirsearch -y
 sudo apt-get install python3-pip -y
 sudo apt-get install amap -y
 sudo apt-get install docker.io -y
+sudo apt-get install subfinder -y
+sudo apt-get install plank -y
 sudo apt-get install bloodhound -y
 sudo searchsploit -u
 sudo nmap --script-updatedb
@@ -44,9 +46,11 @@ wget https://raw.githubusercontent.com/Arinerron/CVE-2022-0847-DirtyPipe-Exploit
 wget https://raw.githubusercontent.com/FireFart/dirtycow/master/dirty.c; mv dirty.c dirtycow.c
 wget https://raw.githubusercontent.com/diego-treitos/linux-smart-enumeration/master/lse.sh; mv lse.sh LinuxSmartEnum.sh
 cd /home/kali/Tools/windows/AD
+wget https://raw.githubusercontent.com/h1dz/Windows-Tools/master/SharpHound.ps1
 git clone https://github.com/Ridter/noPac
 git clone https://github.com/harshil-shah004/zerologon-CVE-2020-1472.git
 wget https://raw.githubusercontent.com/fox-it/BloodHound.py/master/bloodhound.py; mv bloodhound.py bloodhound-python.py
+wget https://raw.githubusercontent.com/61106960/adPEAS/main/adPEAS.ps1
 cd /home/kali/Tools/web
 git clone https://github.com/stamparm/DSSS.git; mv DSSS SQLi
 git clone https://github.com/Tuhinshubhra/CMSeeK
@@ -55,10 +59,14 @@ git clone https://github.com/s0md3v/XSStrike
 git clone https://github.com/dievus/msdorkdump.git
 wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/Wordlist.py  #web?
 cd /home/kali/home/
-wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/PortScan.sh; chmod +x PortScan.sh
+wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/NmapScan.sh; chmod +x NmapScan.sh
+wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/masscan.sh; chmod +x masscan.sh
 wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/Vhosts.sh; chmod +x Vhosts.sh
-wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/gobuster.sh; chmod +x gobuster.sh
+wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/gobuster.sh; chmod +x gobuster.sh; mv gobuster.sh go.sh
 wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/ping.sh; chmod +x ping.sh
+wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/smb3num.sh; chmod +x smb3num.sh
+wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/scrape.sh; chmod +x scrape.sh
+wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/dnsenum.sh; chmod +x dnsenum.sh
 cd /home/kali/
 tput setaf 5; echo "Manual Install: https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64"
 tput setaf 5; echo "Manual Install: https://github.com/carlospolop/PEASS-ng/releases/download/20220203/winPEASx64.exe"
@@ -71,4 +79,6 @@ tput setaf 5; echo "Manual Install: https://github.com/h1dz/Windows-Tools/raw/ma
 tput setaf 5; echo "Manual Install: https://github.com/h1dz/Windows-Tools/raw/master/sharphound.exe"
 tput setaf 5; echo "Manual Install: https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotato.exe"
 tput setaf 5; echo "Manual Install: https://github.com/antonioCoco/RoguePotato/releases/download/1.0/RoguePotato.zip"
+tput setaf 5; echo "Manual Install: https://github.com/int0x33/nc.exe/raw/master/nc64.exe"
+tput setaf 5; echo "Download Wallpaper: https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e72f0c31-73e4-4a4c-a550-1bbec53d1629/d9ljjpq-79dc7f0f-6cd0-459d-9f86-fb5d286da4f3.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2U3MmYwYzMxLTczZTQtNGE0Yy1hNTUwLTFiYmVjNTNkMTYyOVwvZDlsampwcS03OWRjN2YwZi02Y2QwLTQ1OWQtOWY4Ni1mYjVkMjg2ZGE0ZjMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.2wtQoOz65L45Vd0g_NqXVLNxK-3ZruP8181vmINxA0o"
 tput setaf 3; echo "Updates Complete!"
