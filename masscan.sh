@@ -1,6 +1,7 @@
 #!/bin/bash
 R='\033[5;32m' #${R} green flash
 N='\033[0m'    #${N} null
+rm -rf ports0.txt 2>/dev/null
 rm -rf ports2.txt 2>/dev/null
 rm -rf ports3.txt 2>/dev/null
 rm -rf masscan1.txt 2>/dev/null
@@ -8,6 +9,8 @@ rm -rf masscan2.txt 2>/dev/null
 rm -rf masscan3.txt 2>/dev/null
 rm -rf masscan4.txt 2>/dev/null
 clear
+/home/kali/ctf/ping.sh $1
+tput sgr0; echo ""
 date
 tput setaf 3; printf ${Y}"IP = "$1
 tput bold; printf "\n\n${R}Running Scans...!${N}\n"
@@ -45,14 +48,15 @@ tput bold; echo $ports4 | sed "s/ /\n/g"; tput sgr0; 2>/dev/null
 tput setaf 8; printf "===== UDP SCAN FINISHED =====\n"; tput sgr0;
 rm -rf masscan4.txt 2>/dev/null
 clear
-date > ports2.txt
-tput setaf 3; printf "============================================ First Scan ============================================\n" | tee -a -i ports2.txt
+date | tee -a -i ports0.txt
+tput setaf 3; printf "============================================ First Scan ============================================\n" | tee -a -i ports0.txt
 tput sgr0; 
-cat ports2.txt 2>/dev/null | tee -a -i ports2.txt
+cat ports2.txt | tee -a -i ports0.txt 2>/dev/null 
 tput sgr0; 
-tput setaf 3; printf "============================================ Final Scan============================================\n" | tee -a -i ports2.txt
+tput setaf 3; printf "============================================ Final Scan============================================\n" | tee -a -i ports0.txt
 tput sgr0; 
-cat ports3.txt 2>/dev/null | tee -a -i ports2.txt
-tput setaf 3; printf "============================================ ${R}FINISHED!${N}"; tput setaf 3; printf " ============================================\n" | tee -a -i ports2.txt
+cat ports3.txt | tee -a -i ports0.txt 2>/dev/null 
+tput setaf 3; printf "============================================ ${R}FINISHED!${N}"; tput setaf 3; printf " ============================================\n" | tee -a -i ports0.txt
 tput sgr0;
+rm -rf ports2.txt 2>/dev/null
 rm -rf ports3.txt 2>/dev/null
