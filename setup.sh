@@ -18,6 +18,7 @@ sudo apt-get install python3-pip -y
 sudo apt-get install amap -y
 sudo apt-get install docker.io -y
 sudo apt-get install subfinder -y
+sudo apt-get install neo4j -y   
 sudo apt-get install bloodhound -y
 sudo searchsploit -u
 sudo nmap --script-updatedb
