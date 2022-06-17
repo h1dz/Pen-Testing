@@ -16,7 +16,8 @@ This page will link to scripts I have made that are orientated towards penetrati
 - Ping script to get a better idea what operating system the host is running and if it is up
 - Gobuster enumeration script  
 - Nmap/masscan port scan script 
-- Wordlist generator for Month+Year and Season+Year  
+- Masscan Tcp and Udp ports
+- DNS enumeration
 
 ## Check out my Gitbooks page
 ### [GitBooks](https://h1dz.gitbook.io/pen-testing/)  
