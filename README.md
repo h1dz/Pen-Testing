@@ -15,8 +15,8 @@ This page will link to scripts I have made that are orientated towards penetrati
 - Make a dictionary file for bruteforcing using a URL.
 - Ping script to get a better idea what operating system the host is running and if it is up
 - Gobuster enumeration script  
-- Nmap/masscan port scan script 
-- Masscan Tcp and Udp ports
+- Nmap port scanning script 
+- Masscan to scan Tcp and Udp ports
 - DNS enumeration
 
 ## Check out my Gitbooks page
