@@ -27,8 +27,8 @@ Ping script to get a better idea what operating system the host is running and i
 -Usage:     `./ping.sh <ip>`   
       
 ## NmapScan.sh
-Script for nmap/masscan that I regulary use to scan all ports as fast as possible. Will first output a quick scan result then proceed to do a full scan.  
--Usage:     `./PortScan.sh <ip>`
+Script for nmap that I regulary use to scan all ports as fast as possible. Will first output a quick scan result then proceed to do a full scan.  
+-Usage:     `./NmapScan.sh <ip>`
    
 ## gobuster.sh
 Runs gobuster scans with different wordlists, will take a while to get through all of them. Just something you can run in the background. Change line 23 if your wordlists are in a different path than mine.   
