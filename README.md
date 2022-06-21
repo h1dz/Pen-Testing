@@ -45,4 +45,12 @@ Runs masscan scanning both TCP and UDP.
 ## dnsenum.sh   
 Runs many different commands with a large output to sift through for enumerating dns.   
 -Usage     `sudo ./dnsenum.sh <RHOST> <domain>`   
+   
+## SubnetSweep.sh   
+Runs a ping sweep finding subnets that are live.   
+-Usage      `./SubnetSweep.sh <xxx.xxx.xxx>`    
+   
+## SubnetNmapSweep.sh   
+Runs a ping sweep finding subnets that are live and then conducting a thorough nmap scan.   
+-Usage      `sudo ./SubnetSweep.sh <xxx.xxx.xxx>`    
   
