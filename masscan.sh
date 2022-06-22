@@ -9,7 +9,6 @@ rm -rf masscan2.txt 2>/dev/null
 rm -rf masscan3.txt 2>/dev/null
 rm -rf masscan4.txt 2>/dev/null
 clear
-/home/kali/ctf/ping.sh $1
 tput sgr0; echo ""
 date
 tput setaf 3; printf ${Y}"IP = "$1
