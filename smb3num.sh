@@ -18,6 +18,13 @@ printf "${G}\n----------------------------------Check if writable---------------
 sudo nmap -p445 --script=smb-enum-shares.nse,smb-enum-users.nse $1 2>/dev/null | tee -a -i smbResults
 sudo nmap -Pn -p445 --script=smb-enum-shares.nse,smb-enum-users.nse $1 2>/dev/null | tee -a -i smbResults
 sudo nmap -Pn -p445 --script=smb-enum-shares.nse,smb-enum-users.nse $1 2>/dev/null > sharesSMB.txt
+printf "${G}\n----------------------------------Run Scripts----------------------------------\n\n${B}" | tee -a -i smbResults
+sudo nmap -Pn -p139,445 --script smb-vuln-ms17-010 $1 2>/dev/null | tee -a -i smbResults
+sudo nmap -Pn -p139,445 --script=smb2-security-mode.nse $1 2>/dev/null | tee -a -i smbResults   
+sudo nmap -Pn -p139,445 --script smb-vuln-cve-2017-7494 --script-args smb-vuln-cve-2017-7494.check-version $1 2>/dev/null | tee -a -i smbResults
+sudo nmap -Pn -p139,445 --script smb-vuln-cve2009-3103 $1 2>/dev/null | tee -a -i smbResults
+sudo nmap -Pn -p139,445 --script=smb-vuln* $1 2>/dev/null | tee -a -i smbResults
+crackmapexec smb <IP> -u '' -p '' --users --rid-brute | grep '(SidTypeUser)' 2>/dev/null | tee -a -i smbResults
 printf "${G}\n----------------------------------CrackMapExec /OS----------------------------------\n\n${B}" | tee -a -i smbResults
 crackmapexec smb $1 --shares 2>/dev/null | tee -a -i smbResults
 crackmapexec smb $1 --pass-pol 2>/dev/null | tee -a -i smbResults
@@ -32,17 +39,31 @@ smbclient \\\\$1\\ -U Administrator 2>/dev/null | tee -a -i smbResults
 smbget -R smb://$1/guest 2>/dev/null | tee -a -i smbResults
 crackmapexec smb $1 -u '' -p '' 2>/dev/null | tee -a -i smbResults
 printf "${G}\n----------------------------------Check RPC info----------------------------------\n\n${B}" | tee -a -i smbResults
-rpcclint -U '' --no-pass 'querydispinfo' $1  > data.txt; cat data.txt | awk --field-seperator 'Account: ' '{print $2}' | awk --field-seperator ' ' '{print $1}'
-rpcclient -U "" -N $1 2>/dev/null | tee -a -i smbResults
+rpcclient -U '' --no-pass 'querydispinfo' $1 > data.txt; cat data.txt | awk --field-seperator 'Account: ' '{print $2}' | awk --field-seperator ' ' '{print $1}' | tee -a -i smbResults
+rpcclient -U "" -N $1 2>/dev/null | tee -a -i smbResults    
 printf "${G}\\n----------------------------------Try the following----------------------------------\n\n${B}" | tee -a -i smbResults
-echo "Try connect to a share, try no creds first and then with user/pass"
-echo "Try upload reverse shell into a writeable share or try with a bash reverse shell"
-echo "Try upload SCF file"
-echo "Try mount the share and extract SAM&SYSTEM files"
-echo "Try NULL logins"
-echo "!!!ENUMERATE SHARES AGAIN WHEN FOUND CREDENTIALS!!!"
+echo "Try connect to a share, try no creds first and then with user/pass" 2>/dev/null | tee -a -i smbResults
+echo "Try upload reverse shell into a writeable share or try with a bash reverse shell" 2>/dev/null | tee -a -i smbResults
+echo "Try upload SCF file" 2>/dev/null | tee -a -i smbResults
+echo "Try mount the share and extract SAM&SYSTEM files" 2>/dev/null | tee -a -i smbResults
+echo "Try NULL logins" 2>/dev/null | tee -a -i smbResults
+echo "!!!ENUMERATE SHARES AGAIN WHEN FOUND CREDENTIALS!!!" 2>/dev/null | tee -a -i smbResults
+printf "${G}\n----------------------------------Download files----------------------------------\n\n${B}" | tee -a -i smbResults
+printf "Attempt to download files from shares?     yes/no\n\n"
+read CONT
+if [ "$CONT" == "yes" ];
+then
+smbmap -H $1 -u anonymous -R   
+printf "${G}\n----------------------------------Finished----------------------------------\n\n${Y}" | tee -a -i smbResults
+clear
+cat smbResults
+cat sharesSMB.txt
+elif [ "$CONT" == "no" ];  
 printf "${G}\n----------------------------------Finished----------------------------------\n\n${Y}" | tee -a -i smbResults
 date | tee -a -i smbResults
 clear
 cat smbResults
 cat sharesSMB.txt
+elif [ "$CONT" == " " ];
+printf "Inproper input!"
+fi
