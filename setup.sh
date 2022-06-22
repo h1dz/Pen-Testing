@@ -18,7 +18,7 @@ sudo apt-get install python3-pip -y
 sudo apt-get install amap -y
 sudo apt-get install docker.io -y
 sudo apt-get install subfinder -y
-sudo apt-get install neo4j -y   
+sudo apt-get install neo4j -y
 sudo apt-get install bloodhound -y
 sudo searchsploit -u
 sudo nmap --script-updatedb
@@ -59,14 +59,16 @@ git clone https://github.com/s0md3v/XSStrike
 git clone https://github.com/dievus/msdorkdump.git
 wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/Wordlist.py  #web?
 cd /home/kali/home/
-wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/NmapScan.sh; chmod +x NmapScan.sh
+wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/NmapScan.sh; chmod +x nmapScan.sh
 wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/masscan.sh; chmod +x masscan.sh
-wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/Vhosts.sh; chmod +x Vhosts.sh
+wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/Vhosts.sh; chmod +x vhosts.sh
 wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/gobuster.sh; chmod +x gobuster.sh; mv gobuster.sh go.sh
 wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/ping.sh; chmod +x ping.sh
 wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/smb3num.sh; chmod +x smb3num.sh
 wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/scrape.sh; chmod +x scrape.sh
 wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/dnsenum.sh; chmod +x dnsenum.sh
+wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/SubnetSweep.sh; chmod +x SubnetSweep.sh
+wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/SubnetNmapSweep.sh; chmod +x SubnetNmapSweep.sh
 cd /home/kali/
 tput setaf 5; echo "Manual Install: https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64"
 tput setaf 5; echo "Manual Install: https://github.com/carlospolop/PEASS-ng/releases/download/20220203/winPEASx64.exe"
