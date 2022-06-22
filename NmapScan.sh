@@ -6,6 +6,7 @@ R='\033[5;32m' #${R}
 G='\033[0;92m' #${G}
 Y='\033[0;33m' #${Y}
 N='\033[0m'    #${N}
+tput sgr0; echo ""
 date | tee -a -i nmap.txt
 date >> ports1.txt
 printf ${Y}"IP = "$1 | tee -a -i nmap.txt
