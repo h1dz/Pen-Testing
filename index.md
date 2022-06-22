@@ -15,11 +15,14 @@ This page will link to scripts I have made that are orientated towards penetrati
 - Make a dictionary file for bruteforcing using a URL.
 - Ping script to get a better idea what operating system the host is running and if it is up
 - Gobuster enumeration script  
-- Nmap/masscan port scan script  
+- Nmap port scanning script 
+- Masscan to scan Tcp and Udp ports
+- DNS enumeration
+- Scan for subnets of an ip and auto perform nmap on the found ip's.
 
 ## Check out my Gitbooks page
 ### [GitBooks](https://h1dz.gitbook.io/pen-testing/)  
   
     
    
-_last update: 06/06/2022_
+_last update: 18/06/2022_
