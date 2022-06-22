@@ -18,10 +18,11 @@ This page will link to scripts I have made that are orientated towards penetrati
 - Nmap port scanning script 
 - Masscan to scan Tcp and Udp ports
 - DNS enumeration
+- Scan for subnets of an ip and auto perform nmap on the found ip's.
 
 ## Check out my Gitbooks page
 ### [GitBooks](https://h1dz.gitbook.io/pen-testing/)  
   
     
    
-_last update: 18/06/2022_
+_last update: 22/06/2022_
