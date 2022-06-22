@@ -23,4 +23,5 @@ subfinder -d $2 2>/dev/null
 amass enum -d $2 2>/dev/null
 echo "Try reverse-dns: https://whois.domaintools.com"
 echo "Bruteforcing domains, will take a while..."
+for name in $(cat /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-20000.txt); do host $name.$2 '$1' -W 2; done | grep 'has address'
 dnsrecon -d $2 -D /usr/share/wordlists/seclists/Discovery/DNS/dns-Jhaddix.txt -t brt 2>/dev/null
