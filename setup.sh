@@ -16,6 +16,7 @@ sudo apt-get install nikto -y
 sudo apt-get install dirsearch -y
 sudo apt-get install python3-pip -y
 sudo apt-get install amap -y
+sudo apt-get install nishang -y
 sudo apt-get install docker.io -y
 sudo apt-get install subfinder -y
 sudo apt-get install neo4j -y
@@ -49,15 +50,14 @@ cd /home/kali/Tools/windows/AD
 wget https://raw.githubusercontent.com/h1dz/Windows-Tools/master/SharpHound.ps1
 git clone https://github.com/Ridter/noPac
 git clone https://github.com/harshil-shah004/zerologon-CVE-2020-1472.git
-wget https://raw.githubusercontent.com/fox-it/BloodHound.py/master/bloodhound.py; mv bloodhound.py bloodhound-python.py
 wget https://raw.githubusercontent.com/61106960/adPEAS/main/adPEAS.ps1
+git clone https://github.com/fox-it/BloodHound.py.git; cd BloodHound.py/ && pip install .
 cd /home/kali/Tools/web
-git clone https://github.com/stamparm/DSSS.git; mv DSSS SQLi
+git clone https://github.com/stamparm/DSSS.git
 git clone https://github.com/Tuhinshubhra/CMSeeK
 wget https://raw.githubusercontent.com/SecureAuthCorp/impacket/master/examples/mssqlclient.py
 git clone https://github.com/s0md3v/XSStrike
 git clone https://github.com/dievus/msdorkdump.git
-wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/Wordlist.py  #web?
 cd /home/kali/home/
 wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/NmapScan.sh; chmod +x NmapScan.sh
 wget https://raw.githubusercontent.com/h1dz/Pen-Testing/Scripts/masscan.sh; chmod +x masscan.sh
