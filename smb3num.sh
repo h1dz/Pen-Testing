@@ -1,7 +1,7 @@
 #!/bin/bash
 #Script for enumerating SMB port 445 with no credentials
 #Run with sudo
-#Usage:                   sudo ./smb3num.sh <ip>
+#Usage:                   sudo ./smb3num <ip>
 B='\033[0;96m' #${B}
 G='\033[0;92m' #${G}
 R='\033[0;91m' #${R}
@@ -47,26 +47,8 @@ echo "Try upload SCF file" 2>/dev/null | tee -a -i smbResults
 echo "Try mount the share and extract SAM&SYSTEM files" 2>/dev/null | tee -a -i smbResults
 echo "Try NULL logins" 2>/dev/null | tee -a -i smbResults
 echo "!!!ENUMERATE SHARES AGAIN WHEN FOUND CREDENTIALS!!!" 2>/dev/null | tee -a -i smbResults
-printf "${G}\n----------------------------------Download files----------------------------------\n\n${B}" | tee -a -i smbResults
-printf "Attempt to download files from shares?     yes/no\n\n"
-read CONT 2>/dev/null  
-if [[ "$CONT" == *"yes"* ]] 2>/dev/null; 
-then
-smbmap -H $1 -u anonymous -R 2>/dev/null    
 printf "${G}\n----------------------------------Finished----------------------------------\n\n${Y}" | tee -a -i smbResults
 date | tee -a -i smbResults
 clear
 cat smbResults 2>/dev/null
 cat sharesSMB.txt 2>/dev/null
-elif [[ "$CONT" == *"no"* ]] 2>/dev/null; 
-then  
-printf "${G}\n----------------------------------Finished----------------------------------\n\n${Y}" | tee -a -i smbResults
-date | tee -a -i smbResults
-clear
-cat smbResults 2>/dev/null
-cat sharesSMB.txt 2>/dev/null
-elif [[ -z "$CONT" ]] 2>/dev/null; 
-then  
-echo "\n${R}Error, improper input! yes or no only.${N}\n"
-printf "${G}\n----------------------------------Finished----------------------------------\n\n${Y}" | tee -a -i smbResults
-fi
