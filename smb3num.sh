@@ -1,7 +1,7 @@
 #!/bin/bash
 #Script for enumerating SMB port 445 with no credentials
 #Run with sudo
-#Usage:                   sudo ./smb3num <ip>
+#Usage:                   sudo ./smb3num.sh <ip>
 B='\033[0;96m' #${B}
 G='\033[0;92m' #${G}
 R='\033[0;91m' #${R}
@@ -39,7 +39,6 @@ smbclient \\\\$1\\ -U Administrator 2>/dev/null | tee -a -i smbResults
 smbget -R smb://$1/guest 2>/dev/null | tee -a -i smbResults
 crackmapexec smb $1 -u '' -p '' 2>/dev/null | tee -a -i smbResults
 printf "${G}\n----------------------------------Check RPC info----------------------------------\n\n${B}" | tee -a -i smbResults
-rpcclient -U '' --no-pass 'querydispinfo' $1 > data.txt; cat data.txt | awk --field-seperator 'Account: ' '{print $2}' | awk --field-seperator ' ' '{print $1}' | tee -a -i smbResults
 rpcclient -U "" -N $1 2>/dev/null | tee -a -i smbResults    
 printf "${G}\\n----------------------------------Try the following----------------------------------\n\n${B}" | tee -a -i smbResults
 echo "Try connect to a share, try no creds first and then with user/pass" 2>/dev/null | tee -a -i smbResults
@@ -50,20 +49,24 @@ echo "Try NULL logins" 2>/dev/null | tee -a -i smbResults
 echo "!!!ENUMERATE SHARES AGAIN WHEN FOUND CREDENTIALS!!!" 2>/dev/null | tee -a -i smbResults
 printf "${G}\n----------------------------------Download files----------------------------------\n\n${B}" | tee -a -i smbResults
 printf "Attempt to download files from shares?     yes/no\n\n"
-read CONT
-if [ "$CONT" == "yes" ];
+read CONT 2>/dev/null  
+if [[ "$CONT" == *"yes"* ]] 2>/dev/null; 
 then
-smbmap -H $1 -u anonymous -R   
-printf "${G}\n----------------------------------Finished----------------------------------\n\n${Y}" | tee -a -i smbResults
-clear
-cat smbResults
-cat sharesSMB.txt
-elif [ "$CONT" == "no" ];  
+smbmap -H $1 -u anonymous -R 2>/dev/null    
 printf "${G}\n----------------------------------Finished----------------------------------\n\n${Y}" | tee -a -i smbResults
 date | tee -a -i smbResults
 clear
-cat smbResults
-cat sharesSMB.txt
-elif [ "$CONT" == " " ];
-printf "Inproper input!"
+cat smbResults 2>/dev/null
+cat sharesSMB.txt 2>/dev/null
+elif [[ "$CONT" == *"no"* ]] 2>/dev/null; 
+then  
+printf "${G}\n----------------------------------Finished----------------------------------\n\n${Y}" | tee -a -i smbResults
+date | tee -a -i smbResults
+clear
+cat smbResults 2>/dev/null
+cat sharesSMB.txt 2>/dev/null
+elif [[ -z "$CONT" ]] 2>/dev/null; 
+then  
+echo "\n${R}Error, improper input! yes or no only.${N}\n"
+printf "${G}\n----------------------------------Finished----------------------------------\n\n${Y}" | tee -a -i smbResults
 fi
